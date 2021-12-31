@@ -98,7 +98,7 @@ const MenuButton = styled.div`
 
 const MenuContianer = styled.div`
 	@media ${display.laptop} {
-		background-color: ${(props) => props.theme.colors.bgClr};
+		background-color: ${(props) => props.theme.colors.bgClr900};
 		position: absolute;
 		top: 5.5rem;
 		left: 0;
@@ -130,6 +130,6 @@ const MenuItem = styled.li`
 	font-weight: 450;
 
 	&:hover {
-		color: ${(props) => props.theme.colors.primaryBg};
+		color: ${(props) => props.theme.colors.primaryClr};
 	}
 `;
