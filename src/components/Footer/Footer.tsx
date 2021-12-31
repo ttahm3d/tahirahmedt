@@ -36,8 +36,9 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
+	background-color: ${(props) => props.theme.colors.primaryClrDkr};
 	margin-top: auto;
-	background-color: #1a1d24;
 	padding: 4rem 0;
 	color: white;
+	height: 200vh;
 `;
