@@ -9,6 +9,7 @@ import { ThemeToggleType } from "../../utils/types/types";
 import { Container } from "../../utils/styles/globals";
 import logo from "../../assets/logo.svg";
 import { useScreenWidth } from "../../utils/hooks/useScreenWidth";
+import { SiHashnode } from "react-icons/si";
 
 const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 	const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
@@ -25,9 +26,11 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 					{isMenuVisible || width > 1024 ? (
 						<MenuContianer>
 							<MenuList>
-								<MenuItem>Blog</MenuItem>
 								<MenuItem>About</MenuItem>
 								<MenuItem>Projects</MenuItem>
+								<MenuItem>
+									<SiHashnode />
+								</MenuItem>
 								<MenuItem>
 									<GrLinkedin />
 								</MenuItem>
@@ -39,7 +42,11 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 					) : null}
 					<NavButtons>
 						<NavButton onClick={() => toggleTheme()}>
-							{theme === "dark" ? <FiSun /> : <IoMdMoon />}
+							{theme === "dark" ? (
+								<FiSun fill="hsl(53,92%,50%)" />
+							) : (
+								<IoMdMoon fill="hsl(245,4.5%,50%)" />
+							)}
 						</NavButton>
 						<MenuButton onClick={() => setMenuVisible(!isMenuVisible)}>
 							{!isMenuVisible ? <FiMenu /> : <FiX />}
@@ -123,6 +130,6 @@ const MenuItem = styled.li`
 	font-weight: 450;
 
 	&:hover {
-		opacity: 0.75;
+		color: ${(props) => props.theme.colors.primaryBg};
 	}
 `;
