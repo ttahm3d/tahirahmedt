@@ -1,48 +1,47 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "../../utils/styles/globals";
+import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiSun, FiMenu, FiX } from "react-icons/fi";
 import { IoMdMoon } from "react-icons/io";
 import { display } from "../../utils/styles/devices";
 import { ThemeToggleType } from "../../utils/types/types";
+import logo from "../../assets/logo.svg";
 
 const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
-	const [isMenuVisible, setMenuVisible] = useState(false);
+	const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
 
 	return (
 		<HeaderContainer>
-			<Container>
-				<Navbar>
-					<LogoButtons>
-						<Logo aria-label="Home">Tahir</Logo>
-						<NavButtons>
-							<NavButton onClick={() => toggleTheme()}>
-								{theme === "dark" ? <FiSun /> : <IoMdMoon />}
-							</NavButton>
-							<NavButton onClick={() => setMenuVisible(!isMenuVisible)}>
-								{!isMenuVisible ? <FiMenu /> : <FiX />}
-							</NavButton>
-						</NavButtons>
-					</LogoButtons>
-					<MenuContianer
-						style={{ display: isMenuVisible ? "block" : "hidden" }}>
-						{isMenuVisible ? (
-							<MenuList>
-								<MenuItem>Blog</MenuItem>
-								<MenuItem>About</MenuItem>
-								<MenuItem>Projects</MenuItem>
-								<MenuItem>
-									<FaLinkedin />
-								</MenuItem>
-								<MenuItem>
-									<FaGithub />
-								</MenuItem>
-							</MenuList>
-						) : null}
+			<Navbar>
+				<Logo aria-label="Home">
+					<Image src={logo} alt="logo" />
+				</Logo>
+				{isMenuVisible ? (
+					<MenuContianer>
+						<MenuList>
+							<MenuItem>Blog</MenuItem>
+							<MenuItem>About</MenuItem>
+							<MenuItem>Projects</MenuItem>
+							<MenuItem>
+								<FaLinkedin />
+							</MenuItem>
+							<MenuItem>
+								<FaGithub />
+							</MenuItem>
+						</MenuList>
 					</MenuContianer>
-				</Navbar>
-			</Container>
+				) : null}
+				<NavButtons>
+					<NavButton onClick={() => toggleTheme()}>
+						{theme === "dark" ? <FiSun /> : <IoMdMoon />}
+					</NavButton>
+					<MenuButton onClick={() => setMenuVisible(!isMenuVisible)}>
+						{!isMenuVisible ? <FiMenu /> : <FiX />}
+					</MenuButton>
+				</NavButtons>
+			</Navbar>
 		</HeaderContainer>
 	);
 };
@@ -54,13 +53,18 @@ const HeaderContainer = styled.header`
 	position: sticky;
 	top: 0;
 	backdrop-filter: blur(0.5rem);
-	font-size: 2rem;
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	z-index: 999;
 `;
 
 const Navbar = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	align-items: center;
 `;
 
 const Logo = styled.div`
@@ -70,9 +74,7 @@ const Logo = styled.div`
 
 const LogoButtons = styled.div`
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
-	gap: 1rem;
 `;
 
 const NavButtons = styled.div`
@@ -82,13 +84,29 @@ const NavButtons = styled.div`
 
 const NavButton = styled.div``;
 
+const MenuButton = styled.div`
+	display: none;
+
+	@media ${display.laptopS} {
+		display: block;
+	}
+`;
+
 const MenuContianer = styled.div`
-	width: 90%;
-	font-size: 1.8rem;
+	/* background: red; */
+	@media ${display.laptopS} {
+		background-color: ${(props) => props.theme.colors.navClr};
+		position: absolute;
+		top: 5.5rem;
+		left: 0;
+		right: 0;
+		opacity: 0.9;
+		height: calc(100vh - 5.5rem);
+	}
 `;
 
 const MenuList = styled.ul`
-	padding: 0;
+	/* padding: 0;
 	margin: 0;
 	display: flex;
 	align-items: flex-start;
@@ -97,16 +115,28 @@ const MenuList = styled.ul`
 	padding: 0.3125rem;
 	gap: 1.3125rem;
 	position: absolute;
-	top: 5.5rem;
+	top: 6rem;
 	left: 0;
 	right: 0;
 	opacity: 0.9;
-	background-color: ${(props) => props.theme.colors.navClr};
-	height: calc(100vh - 5.5rem);
+	height: calc(100vh - 6rem);
+	z-index: 3;
+
+	@media ${display.laptop} {
+		display: none;
+	} */
+
+	display: flex;
+	justify-content: flex-start;
+	padding: 0;
+	margin: 0;
 
 	@media ${display.laptopS} {
-		position: static;
-		flex-direction: row;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+		height: 100%;
+		gap: 1rem;
 	}
 `;
 
@@ -114,6 +144,7 @@ const MenuItem = styled.li`
 	list-style: none;
 	padding-left: 1.3125rem;
 	font-weight: 450;
+	/* background: purple; */
 
 	&:hover {
 		opacity: 0.75;
