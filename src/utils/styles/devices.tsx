@@ -1,4 +1,4 @@
-const screenSize = {
+export const screenSize = {
 	mobileS: "320px",
 	mobileM: "375px",
 	mobileL: "425px",

@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${(props) => props.theme.colors.bgClr};
     color: ${(props) => props.theme.colors.fontClr};
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
   }
   
   h1, h2, h3, h4 {
