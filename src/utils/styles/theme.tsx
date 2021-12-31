@@ -1,6 +1,26 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  ::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.primaryClrDk};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.primaryClrLt};
+    border: 5px solid transparent;
+    border-radius: 100vw;
+    /* background-clip: content-box; */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background:  ${(props) => props.theme.colors.primaryClrLtr};
+  }
+
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -34,7 +54,7 @@ export const LightTheme = {
 		primaryClrLt: "hsl(208, 100%, 68%)",
 		primaryClrLtr: "hsl(208, 100%, 85%)",
 		primaryClrDk: "hsl(208, 82%, 40%)",
-		primaryClrDkr: "hsl(208, 82%, 26%)",
+		primaryClrDkr: "hsl(208, 82%, 15%)",
 		fontClr900: "hsl(0, 0%, 5%)",
 		fontClr700: "hsl(0, 0%, 8%)",
 		fontClr500: "hsl(0, 0%, 10%)",
@@ -53,7 +73,7 @@ export const DarkTheme = {
 		primaryClrLt: "hsl(208, 100%, 68%)",
 		primaryClrLtr: "hsl(208, 100%, 85%)",
 		primaryClrDk: "hsl(208, 82%, 40%)",
-		primaryClrDkr: "hsl(208, 82%, 26%)",
+		primaryClrDkr: "hsl(208, 82%, 15%)",
 		fontClr900: "hsl(0, 0%, 48%)",
 		fontClr700: "hsl(0, 0%, 74%)",
 		fontClr500: "hsl(0, 0%, 99%)",

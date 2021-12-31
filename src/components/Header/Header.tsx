@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
 import { GrLinkedin } from "react-icons/gr";
@@ -6,7 +7,7 @@ import { FiSun, FiMenu, FiX, FiGithub } from "react-icons/fi";
 import { IoMdMoon } from "react-icons/io";
 import { display } from "../../utils/styles/devices";
 import { ThemeToggleType } from "../../utils/types/types";
-import { Container } from "../../utils/styles/globals";
+import { Container, FlexBox } from "../../utils/styles/globals";
 import logo from "../../assets/logo.svg";
 import { useScreenWidth } from "../../utils/hooks/useScreenWidth";
 import { SiHashnode } from "react-icons/si";
@@ -21,23 +22,46 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 			<Container>
 				<Navbar>
 					<Logo aria-label="Home">
-						<Image src={logo} alt="logo" />
+						<NavLink href="/">
+							<Image src={logo} alt="logo" />
+						</NavLink>
 					</Logo>
 					{isMenuVisible || width > 1024 ? (
 						<MenuContianer>
-							<MenuList>
-								<MenuItem>About</MenuItem>
-								<MenuItem>Projects</MenuItem>
-								<MenuItem>
-									<SiHashnode />
-								</MenuItem>
-								<MenuItem>
-									<GrLinkedin />
-								</MenuItem>
-								<MenuItem>
-									<FiGithub />
-								</MenuItem>
-							</MenuList>
+							<NavList>
+								<NavItem onClick={() => setMenuVisible(false)}>
+									<NavLink href="/about">About</NavLink>
+								</NavItem>
+								<NavItem onClick={() => setMenuVisible(false)}>
+									<NavLink href="/projects">Projects</NavLink>
+								</NavItem>
+								<FlexBox>
+									<NavItem onClick={() => setMenuVisible(false)}>
+										<ExtLink
+											href="https://blog.tahirahmedt.com"
+											target="_blank"
+											rel="noopener noreferrer">
+											<SiHashnode />
+										</ExtLink>
+									</NavItem>
+									<NavItem onClick={() => setMenuVisible(false)}>
+										<ExtLink
+											href="https://www.linkedin.com/in/tahirahmedt"
+											target="_blank"
+											rel="noopener noreferrer">
+											<GrLinkedin />
+										</ExtLink>
+									</NavItem>
+									<NavItem onClick={() => setMenuVisible(false)}>
+										<ExtLink
+											href="https://www.github.com/ttahm3d"
+											target="_blank"
+											rel="noopener noreferrer">
+											<FiGithub />
+										</ExtLink>
+									</NavItem>
+								</FlexBox>
+							</NavList>
 						</MenuContianer>
 					) : null}
 					<NavButtons>
@@ -45,7 +69,7 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 							{theme === "dark" ? (
 								<FiSun fill="hsl(53,92%,50%)" />
 							) : (
-								<IoMdMoon fill="hsl(245,4.5%,50%)" />
+								<IoMdMoon fill="hsl(245, 26%, 8%)" />
 							)}
 						</NavButton>
 						<MenuButton onClick={() => setMenuVisible(!isMenuVisible)}>
@@ -79,7 +103,10 @@ const Navbar = styled.nav`
 	align-items: center;
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+	Link {
+	}
+`;
 
 const NavButtons = styled.div`
 	display: flex;
@@ -98,18 +125,17 @@ const MenuButton = styled.div`
 
 const MenuContianer = styled.div`
 	@media ${display.laptop} {
-		background-color: ${(props) => props.theme.colors.bgClr900};
+		background-color: ${(props) => props.theme.colors.bgClr700};
 		position: absolute;
 		top: 5.5rem;
 		left: 0;
 		right: 0;
-		opacity: 0.9;
+		opacity: 0.97;
 		height: calc(100vh - 5.5rem);
-		border: 1px solid red;
 	}
 `;
 
-const MenuList = styled.ul`
+const NavList = styled.ul`
 	display: flex;
 	justify-content: flex-start;
 	padding: 0;
@@ -124,12 +150,16 @@ const MenuList = styled.ul`
 	}
 `;
 
-const MenuItem = styled.li`
+const NavItem = styled.li`
 	list-style: none;
 	padding-left: 1.3125rem;
 	font-weight: 450;
 
 	&:hover {
-		color: ${(props) => props.theme.colors.primaryClr};
+		color: ${(props) => props.theme.colors.primaryClrLt};
 	}
 `;
+
+const NavLink = styled(Link)``;
+
+const ExtLink = styled.a``;
