@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Page>
 				<Header theme={theme.title} toggleTheme={toggleTheme} />
 				<Component {...pageProps} />
-				{/* <Footer /> */}
+				<Footer />
 			</Page>
 		</ThemeProvider>
 	);
