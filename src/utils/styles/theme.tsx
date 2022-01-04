@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  ::-webkit-scrollbar {
-    width: 0.5em;
+  /* ::-webkit-scrollbar {
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
@@ -11,14 +11,12 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background: ${(props) => props.theme.colors.primaryClrLt};
-    border: 5px solid transparent;
-    border-radius: 100vw;
-    /* background-clip: content-box; */
+    background-clip: content-box;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background:  ${(props) => props.theme.colors.primaryClrLtr};
-  }
+  } */
 
 
   *, *::before, *::after {
@@ -29,6 +27,9 @@ export const GlobalStyles = createGlobalStyle`
     background: ${(props) => props.theme.colors.bgClr500};
     color: ${(props) => props.theme.colors.fontClr500};
     transition: all 0.2s ease 0s;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    margin:0;
   }
   
   h1, h2, h3, h4 {
@@ -51,7 +52,7 @@ export const LightTheme = {
 	title: "light",
 	colors: {
 		primaryClr: "hsl(208,100%,55%)",
-		primaryClrLt: "hsl(208, 100%, 68%)",
+		primaryClrLt: "hsl(208, 90%, 74%)",
 		primaryClrLtr: "hsl(208, 100%, 85%)",
 		primaryClrDk: "hsl(208, 82%, 40%)",
 		primaryClrDkr: "hsl(208, 82%, 15%)",
@@ -70,7 +71,7 @@ export const DarkTheme = {
 	title: "dark",
 	colors: {
 		primaryClr: "hsl(208,100%,55%)",
-		primaryClrLt: "hsl(208, 100%, 68%)",
+		primaryClrLt: "hsl(208, 90%, 74%)",
 		primaryClrLtr: "hsl(208, 100%, 85%)",
 		primaryClrDk: "hsl(208, 82%, 40%)",
 		primaryClrDkr: "hsl(208, 82%, 15%)",
