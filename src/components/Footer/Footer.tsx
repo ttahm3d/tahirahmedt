@@ -1,33 +1,20 @@
 import styled from "styled-components";
-import Image from "next/image";
+import Link from "next/link";
 import logo from "../../assets/logo.svg";
-import { Container } from "../../utils/styles/globals";
+import { Container, CenterContent } from "../../utils/styles/globals";
 
 const Footer: React.FC = () => {
 	return (
 		<FooterContainer>
 			<Container>
-				<div>
-					<div>
-						<Image src={logo} alt="logo" />
-					</div>
-					<div>
-						<h4>pages</h4>
-						<ul>
-							<li>Home</li>
-							<li>About</li>
-							<li>Projects</li>
-						</ul>
-					</div>
-					<div>
-						<h4>Other pages</h4>
-						<ul>
-							<li>Twitter</li>
-							<li>LinkedIn</li>
-							<li>Hashnode</li>
-						</ul>
-					</div>
-				</div>
+				<FooterList>
+					<FLink href="/">Home</FLink>
+					<FLink href="/about">About</FLink>
+					<FLink href="/projects">Projects</FLink>
+				</FooterList>
+				<CenterContent>
+					<p>&copy; 2022 &nbsp; Tahir Ahmed T</p>
+				</CenterContent>
 			</Container>
 		</FooterContainer>
 	);
@@ -38,7 +25,21 @@ export default Footer;
 const FooterContainer = styled.footer`
 	background-color: ${(props) => props.theme.colors.primaryClrDkr};
 	margin-top: auto;
-	padding: 4rem 0;
+	padding: 2rem 0;
 	color: white;
-	height: 200vh;
+`;
+
+const FooterList = styled.ul`
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+`;
+
+const FLink = styled(Link)`
+	text-decoration: underline;
+	color: ${(props) => props.theme.colors.fontClr700};
 `;
