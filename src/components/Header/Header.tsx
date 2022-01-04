@@ -106,6 +106,7 @@ const Navbar = styled.nav`
 const Logo = styled.div`
 	Link {
 	}
+	cursor: pointer;
 `;
 
 const NavButtons = styled.div`
@@ -113,7 +114,9 @@ const NavButtons = styled.div`
 	gap: 0.625rem;
 `;
 
-const NavButton = styled.div``;
+const NavButton = styled.div`
+	cursor: pointer;
+`;
 
 const MenuButton = styled.div`
 	display: none;
@@ -132,6 +135,8 @@ const MenuContianer = styled.div`
 		right: 0;
 		opacity: 0.97;
 		height: calc(100vh - 5.5rem);
+		transform: translate(0, 0);
+		transition: transform 2s ease-in;
 	}
 `;
 
