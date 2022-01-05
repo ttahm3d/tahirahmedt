@@ -18,6 +18,8 @@ declare module 'styled-components' {
       bgClr700: string,
       bgClr500: string,
       bgClr300: string,
+      white: string,
+      black: string,
     }
   }
 }

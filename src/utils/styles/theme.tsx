@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  /* ::-webkit-scrollbar {
-    width: 5px;
+  ::-webkit-scrollbar {
+    width: 0.5rem;
   }
 
   ::-webkit-scrollbar-track {
@@ -12,11 +12,12 @@ export const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: ${(props) => props.theme.colors.primaryClrLt};
     background-clip: content-box;
+    border-radius: 100vw;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background:  ${(props) => props.theme.colors.primaryClrLtr};
-  } */
+  }
 
 
   *, *::before, *::after {
@@ -64,6 +65,8 @@ export const LightTheme = {
 		bgClr700: "hsl(0, 0%, 74%)",
 		bgClr500: "hsl(0, 0%, 98%)",
 		bgClr300: "hsl(0, 0%, 99%)",
+		white: "hsl(0,0%,100%)",
+		black: "hsl(0,0%,0%)",
 	},
 };
 
@@ -83,5 +86,7 @@ export const DarkTheme = {
 		bgClr700: "hsl(223, 15%, 9%)",
 		bgClr500: "hsl(222, 16%, 12%)",
 		bgClr300: "hsl(218, 7%, 20%)",
+		white: "hsl(0,0%,100%)",
+		black: "hsl(0,0%,0%)",
 	},
 };
