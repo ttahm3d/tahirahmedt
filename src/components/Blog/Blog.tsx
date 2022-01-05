@@ -20,8 +20,8 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 const BlogWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 30%;
-	padding: 0.5rem;
+	width: 18rem;
+	padding: 0.75rem;
 	border-radius: 0.5rem;
 	background: ${(props) => props.theme.colors.bgClr700};
 
