@@ -9,7 +9,10 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 		<BlogWrapper>
 			<Image src={coverImage} alt={title} width={290} height={180} />
 			<Paragraph>
-				<a href={slug} target="_black" rel="noreferrer noopener">
+				<a
+					href={`https://blog.tahirahmedt.com/` + slug}
+					target="_black"
+					rel="noreferrer noopener">
 					{title}
 				</a>
 			</Paragraph>
@@ -20,7 +23,7 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 const BlogWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 18rem;
+	width: 16rem;
 	padding: 0.75rem;
 	border-radius: 0.5rem;
 	background: ${(props) => props.theme.colors.bgClr700};
