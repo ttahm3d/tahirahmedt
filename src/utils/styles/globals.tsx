@@ -41,12 +41,17 @@ export const Paragraph = styled.p`
 	font-size: 1.125rem;
 	span {
 		font-weight: 800;
-		color: ${(props) => props.theme.colors.primaryClrLt};
+		color: ${(props) => props.theme.colors.primaryClr};
 	}
 
 	a {
 		font-weight: 800;
-		color: ${(props) => props.theme.colors.primaryClrLt};
+		color: ${(props) => props.theme.colors.primaryClr};
 		cursor: pointer;
 	}
+`;
+
+export const SubHeading = styled.h2`
+	font-size: 2.4rem;
+	color: ${(props) => props.theme.colors.primaryClr};
 `;
