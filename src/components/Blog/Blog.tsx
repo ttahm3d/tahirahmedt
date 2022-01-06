@@ -29,11 +29,13 @@ const BlogWrapper = styled.div`
 	background: ${(props) => props.theme.colors.bgClr700};
 
 	img {
-		border-radius: 0 0 0.5rem 0.5rem;
+		border-radius: 0.5rem;
 	}
+
 	p {
 		padding: 0 0.5rem 0;
 	}
+
 	a {
 		color: ${(props) => props.theme.colors.fontClr700};
 
