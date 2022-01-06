@@ -33,19 +33,21 @@ export const Title = styled.h1`
 `;
 
 export const HeroSection = styled.section`
-	padding: 1rem 0 2rem;
+	padding: 1rem 0;
 `;
 
 export const Paragraph = styled.p`
 	padding: 1rem 0;
 	font-size: 1.125rem;
+	color: ${(props) => props.theme.colors.fontClr500};
+
 	span {
-		font-weight: 800;
+		font-weight: 600;
 		color: ${(props) => props.theme.colors.primaryClr};
 	}
 
 	a {
-		font-weight: 800;
+		font-weight: 600;
 		color: ${(props) => props.theme.colors.primaryClr};
 		cursor: pointer;
 	}
