@@ -21,14 +21,17 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 		<HeaderContainer>
 			<Container>
 				<Navbar>
-					<Logo aria-label="Home">
-						<NavLink href="/">
+					<NavLink href="/">
+						<Logo aria-label="Home">
 							<Image src={logo} alt="logo" />
-						</NavLink>
-					</Logo>
+						</Logo>
+					</NavLink>
 					{isMenuVisible || width > 1024 ? (
 						<MenuContianer>
 							<NavList>
+								<NavItem onClick={() => setMenuVisible(false)}>
+									<NavLink href="/">Home</NavLink>
+								</NavItem>
 								<NavItem onClick={() => setMenuVisible(false)}>
 									<NavLink href="/about">About</NavLink>
 								</NavItem>
@@ -92,7 +95,7 @@ const HeaderContainer = styled.header`
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	z-index: 999;
 `;
 
