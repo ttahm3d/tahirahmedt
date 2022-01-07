@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { BlogType } from "../../utils/types/types";
 import { Paragraph } from "../../utils/styles/globals";
+import { display } from "../../utils/styles/devices";
 
 const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 	return (
@@ -22,8 +23,8 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 
 const BlogWrapper = styled.div`
 	display: flex;
-	flex-direction: column;
-	width: 16rem;
+	flex-direction: row;
+	width: 100%;
 	padding: 0.75rem;
 	border-radius: 0.5rem;
 	background: ${(props) => props.theme.colors.bgClr700};
@@ -33,7 +34,8 @@ const BlogWrapper = styled.div`
 	}
 
 	p {
-		padding: 0 0.5rem 0;
+		padding: 0.5rem 0;
+		margin: 0;
 	}
 
 	a {
@@ -41,6 +43,15 @@ const BlogWrapper = styled.div`
 
 		:hover {
 			text-decoration: underline;
+		}
+	}
+
+	@media ${display.laptop} {
+		flex-direction: column;
+		width: 18em;
+
+		p {
+			padding: 0.5rem 0;
 		}
 	}
 `;

@@ -18,6 +18,7 @@ import react from "../src/assets/react.svg";
 import redux from "../src/assets/redux.svg";
 import nextjs from "../src/assets/nextjs.svg";
 import sass from "../src/assets/sass.svg";
+import { display } from "../src/utils/styles/devices";
 
 type Tech = {
 	id: number;
@@ -155,8 +156,13 @@ const BlogsSection = styled.section`
 	padding: 2rem 0;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	gap: 0.75rem;
+
+	@media ${display.laptop} {
+		flex-direction: row;
+	}
 `;
 
 export const getStaticProps: GetStaticProps = async () => {
