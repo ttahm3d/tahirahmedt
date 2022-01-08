@@ -56,6 +56,6 @@ export const Paragraph = styled.p`
 `;
 
 export const SubHeading = styled.h2`
-	font-size: 2.4rem;
+	font-size: 2rem;
 	color: ${(props) => props.theme.colors.primaryClr};
 `;

@@ -9,7 +9,7 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage, brief }) => {
 	return (
 		<BlogWrapper>
 			<div>
-				<Image src={coverImage} alt={title} width={500} height={450} />
+				<Image src={coverImage} alt={title} width={500} height={500} />
 			</div>
 			<div>
 				<Paragraph>
@@ -58,10 +58,7 @@ const BlogWrapper = styled.div`
 
 	a {
 		color: ${(props) => props.theme.colors.fontClr700};
-
-		:hover {
-			text-decoration: underline;
-		}
+		text-decoration: underline;
 	}
 
 	@media ${display.laptop} {
