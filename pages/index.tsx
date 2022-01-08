@@ -26,43 +26,45 @@ type Tech = {
 	icon: string;
 };
 
+const technologies: Tech[] = [
+	{
+		id: 1,
+		icon: react,
+		title: "React",
+	},
+	{
+		id: 2,
+		icon: redux,
+		title: "Redux",
+	},
+	{
+		id: 3,
+		icon: js,
+		title: "JavaScript",
+	},
+	{
+		id: 4,
+		icon: ts,
+		title: "Typescript",
+	},
+	{
+		id: 5,
+		icon: nextjs,
+		title: "NextJS",
+	},
+	{
+		id: 6,
+		icon: sass,
+		title: "SASS",
+	},
+];
+
 const Home: InferGetStaticPropsType<typeof getStaticProps> = ({
 	blogsList,
 }: {
 	blogsList: BlogType[];
 }) => {
-	const [tech, setTech] = useState<Tech[]>([
-		{
-			id: 1,
-			icon: react,
-			title: "React",
-		},
-		{
-			id: 2,
-			icon: redux,
-			title: "Redux",
-		},
-		{
-			id: 3,
-			icon: js,
-			title: "JavaScript",
-		},
-		{
-			id: 4,
-			icon: ts,
-			title: "Typescript",
-		},
-		{
-			id: 5,
-			icon: nextjs,
-			title: "NextJS",
-		},
-		{
-			id: 6,
-			icon: sass,
-			title: "SASS",
-		},
-	]);
+	const [tech, setTech] = useState<Tech[]>([]);
 
 	return (
 		<Container>
@@ -72,29 +74,42 @@ const Home: InferGetStaticPropsType<typeof getStaticProps> = ({
 			</Head>
 			<HeroSection>
 				<Title>
-					Hi, I&apos;m <span>Tahir Ahmed</span>👋
+					Hi, I&apos;m <br />
+					<span>Tahir Ahmed</span>👋
 				</Title>
 			</HeroSection>
 			<Paragraph>
-				I&apos;m a Frontend Developer currently working at&nbsp;
-				<span>Pricewaterhouse Coopers</span>. I have predominently worked with
-				the technologies / libraries in the <span>React Ecosystem</span>.
+				I&apos;m a Frontend Developer from India currently working as&nbsp;
+				<strong>Associate 2</strong> at&nbsp;
+				<strong>Pricewaterhouse Coopers</strong>. I started off as a Dotnet
+				Developer, then moved into a Devops role where I was&nbsp;
+				<strong>Rearchitecting</strong> apps to make them&nbsp;
+				<strong> cloud compatible</strong> and deploying to&nbsp;
+				<strong>Microsft Azure</strong>.
 			</Paragraph>
+			<Paragraph>
+				I love working with <strong>React JS</strong>. I picked it up when I was
+				contemplating my carrer choices during the pandemic and I&apos;m so glad
+				that I stuck with it. Apart from that I&apos;m learning&nbsp;
+				<strong>NextJS</strong>&nbsp; and aspire to be a&nbsp;
+				<strong>FullStack Developer</strong> by the end of 2022.
+			</Paragraph>
+
 			<PrimaryButton
 				href="https://drive.google.com/file/d/1xrrJbpRbTasWyrFXoHzVoN2Zke2N02WT/view?usp=sharing"
 				target="_black">
-				View Resume
+				Download Resume
 			</PrimaryButton>
 			<BlogsSection>
 				<Paragraph>
-					I sometimes share my learings on my{" "}
+					I sometimes share my learings on my&nbsp;
 					<a
 						href="https://blog.tahirahmedt.com"
 						target="_blank"
 						rel="noopener noreferrer">
 						Hashnode&nbsp;
 					</a>
-					&nbsp;Blog. Checkout my articles below.
+					&nbsp;blog. Checkout my articles below.
 				</Paragraph>
 				{blogsList.map((blog) => (
 					<Blog key={blog._id} {...blog} />
@@ -105,7 +120,7 @@ const Home: InferGetStaticPropsType<typeof getStaticProps> = ({
 					Below are the technologies that I love to work with
 				</Paragraph>
 				<TList>
-					{tech.map((t) => (
+					{technologies.map((t) => (
 						<TItem key={t.id}>
 							<Image src={t.icon} alt={t.title} />
 							<p>{t.title}</p>
@@ -134,7 +149,7 @@ const TList = styled.ul`
 `;
 
 const TItem = styled.li`
-	width: 12%;
+	width: 5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -144,6 +159,8 @@ const TItem = styled.li`
 
 const PrimaryButton = styled.a`
 	padding: 0.5rem 0.75rem;
+	display: inline-block;
+	height: 2.5rem;
 	background-color: ${(props) => props.theme.colors.primaryClr};
 	color: ${(props) => props.theme.colors.white};
 
@@ -181,6 +198,7 @@ export const getStaticProps: GetStaticProps = async () => {
 							title
 							slug
 							coverImage
+							brief
 						}
 					}
 				}
