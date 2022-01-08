@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { display } from "./devices";
 
 export const Container = styled.div`
 	width: 90%;
-	max-width: 850px;
+	max-width: 56.25em;
 	margin: 0 auto;
 `;
 
@@ -23,27 +24,28 @@ export const CenterContent = styled.div`
 `;
 
 export const Title = styled.h1`
-	font-size: 3.2rem;
+	font-size: 3rem;
 	font-weight: 400;
 
 	span {
+		font-size: 3.4rem;
 		font-weight: 900;
 		color: ${(props) => props.theme.colors.primaryClr};
 	}
 `;
 
 export const HeroSection = styled.section`
+	word-break: break-word;
 	padding: 1rem 0;
 `;
 
 export const Paragraph = styled.p`
 	padding: 1rem 0;
-	font-size: 1.125rem;
-	color: ${(props) => props.theme.colors.fontClr500};
+	text-align: justify;
 
-	span {
-		font-weight: 600;
-		color: ${(props) => props.theme.colors.primaryClr};
+	strong {
+		font-weight: 700;
+		color: ${(props) => props.theme.colors.fontClr500};
 	}
 
 	a {

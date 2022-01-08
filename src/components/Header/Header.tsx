@@ -91,12 +91,12 @@ const HeaderContainer = styled.header`
 	padding: 1rem 0;
 	position: sticky;
 	top: 0;
-	backdrop-filter: blur(0.5rem);
+	backdrop-filter: blur(0.25rem);
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
 	font-size: 1.25rem;
-	z-index: 999;
+	z-index: 99;
 `;
 
 const Navbar = styled.nav`
@@ -119,6 +119,11 @@ const NavButtons = styled.div`
 
 const NavButton = styled.div`
 	cursor: pointer;
+
+	:focus {
+		border: 1px solid ${(props) => props.theme.colors.primaryClrDk};
+		border-radius: 1rem;
+	}
 `;
 
 const MenuButton = styled.div`

@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.colors.bgClr500};
-    color: ${(props) => props.theme.colors.fontClr500};
+    color: ${(props) => props.theme.colors.fontClr700};
     transition: all 0.2s ease 0s;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
@@ -57,9 +57,9 @@ export const LightTheme = {
 		primaryClrLtr: "hsl(208, 100%, 85%)",
 		primaryClrDk: "hsl(208, 82%, 40%)",
 		primaryClrDkr: "hsl(208, 82%, 15%)",
-		fontClr900: "hsl(0, 0%, 5%)",
-		fontClr700: "hsl(0, 0%, 8%)",
-		fontClr500: "hsl(0, 0%, 10%)",
+		fontClr900: "hsl(0, 0%, 2%)",
+		fontClr700: "hsl(0, 0%, 10%)",
+		fontClr500: "hsl(0, 0%, 12%)",
 		fontClr300: "hsl(0, 0%, 64%)",
 		bgClr900: "hsl(0, 0%, 48%)",
 		bgClr700: "hsl(0, 0%, 74%)",
@@ -79,8 +79,8 @@ export const DarkTheme = {
 		primaryClrDk: "hsl(208, 82%, 40%)",
 		primaryClrDkr: "hsl(208, 82%, 15%)",
 		fontClr900: "hsl(0, 0%, 48%)",
-		fontClr700: "hsl(0, 0%, 74%)",
-		fontClr500: "hsl(0, 0%, 99%)",
+		fontClr700: "hsl(0, 0%, 85%)",
+		fontClr500: "hsl(0, 0%, 95%)",
 		fontClr300: "hsl(0, 0%, 100%)",
 		bgClr900: "hsl(228, 16%, 6%)",
 		bgClr700: "hsl(223, 15%, 9%)",

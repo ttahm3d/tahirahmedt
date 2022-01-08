@@ -23,10 +23,9 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-	background-color: ${(props) => props.theme.colors.primaryClrDkr};
+	border-top: 1px solid ${(props) => props.theme.colors.bgClr700};
 	margin-top: auto;
 	padding: 2rem 0;
-	color: white;
 `;
 
 const FooterList = styled.ul`
