@@ -5,18 +5,23 @@ import { BlogType } from "../../utils/types/types";
 import { Paragraph } from "../../utils/styles/globals";
 import { display } from "../../utils/styles/devices";
 
-const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
+const Blog: React.FC<BlogType> = ({ title, slug, coverImage, brief }) => {
 	return (
 		<BlogWrapper>
-			<Image src={coverImage} alt={title} width={290} height={180} />
-			<Paragraph>
-				<a
-					href={`https://blog.tahirahmedt.com/` + slug}
-					target="_black"
-					rel="noreferrer noopener">
-					{title}
-				</a>
-			</Paragraph>
+			<div>
+				<Image src={coverImage} alt={title} width={500} height={450} />
+			</div>
+			<div>
+				<Paragraph>
+					<a
+						href={`https://blog.tahirahmedt.com/` + slug}
+						target="_black"
+						rel="noreferrer noopener">
+						{title}
+					</a>
+				</Paragraph>
+				<small>{brief}</small>
+			</div>
 		</BlogWrapper>
 	);
 };
@@ -24,18 +29,31 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage }) => {
 const BlogWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	width: 100%;
 	padding: 0.75rem;
 	border-radius: 0.5rem;
 	background: ${(props) => props.theme.colors.bgClr700};
 
+	> div {
+		flex: 1;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+	}
+
 	img {
 		border-radius: 0.5rem;
+		width: 50%;
 	}
 
 	p {
-		padding: 0.5rem 0;
+		padding: 0 0.5rem 0;
 		margin: 0;
+	}
+
+	small {
+		padding: 1rem 0.5rem 0;
 	}
 
 	a {
@@ -52,6 +70,10 @@ const BlogWrapper = styled.div`
 
 		p {
 			padding: 0.5rem 0;
+		}
+
+		small {
+			display: none;
 		}
 	}
 `;

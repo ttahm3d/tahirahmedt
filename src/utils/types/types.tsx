@@ -10,4 +10,5 @@ export type BlogType = {
 	title: string;
 	slug: string;
 	coverImage: string;
+	brief: string;
 };
