@@ -88,12 +88,13 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 export default Header;
 
 const HeaderContainer = styled.header`
+	background: ${(props) => props.theme.colors.bgClr500};
+	box-shadow: 0px 0px 5px ${(props) => props.theme.colors.bgClr700};
 	padding: 1rem 0;
 	position: sticky;
 	top: 0;
 	backdrop-filter: blur(0.25rem);
 	width: 100%;
-	max-width: 1024px;
 	margin: 0 auto;
 	font-size: 1.25rem;
 	z-index: 99;
@@ -104,6 +105,9 @@ const Navbar = styled.nav`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
 `;
 
 const Logo = styled.div`
