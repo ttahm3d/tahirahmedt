@@ -27,8 +27,11 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage, brief }) => {
 };
 
 const BlogWrapper = styled.div`
-	display: flex;
-	flex-direction: row;
+	/* display: flex;
+	flex-direction: row; */
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 	padding: 0.75rem;
 	border-radius: 0.5rem;
 	background: ${(props) => props.theme.colors.bgClr700};
@@ -48,12 +51,7 @@ const BlogWrapper = styled.div`
 	}
 
 	p {
-		padding: 0 0.5rem 0;
 		margin: 0;
-	}
-
-	small {
-		padding: 1rem 0.5rem 0;
 	}
 
 	a {
@@ -61,17 +59,15 @@ const BlogWrapper = styled.div`
 		text-decoration: underline;
 	}
 
-	@media ${display.laptop} {
-		flex-direction: column;
-		width: 18em;
-
-		p {
+	@media ${display.tablet} {
+		grid-template-columns: 1fr;
+		/* p {
 			padding: 0.5rem 0;
-		}
+		} */
 
-		small {
+		/* small {
 			display: none;
-		}
+		} */
 	}
 `;
 
