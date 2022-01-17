@@ -40,7 +40,7 @@ export const HeroSection = styled.section`
 `;
 
 export const Paragraph = styled.p`
-	padding: 1rem 0;
+	padding: 0 0 1rem;
 	text-align: justify;
 
 	strong {
