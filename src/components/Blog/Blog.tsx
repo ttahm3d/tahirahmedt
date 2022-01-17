@@ -27,8 +27,6 @@ const Blog: React.FC<BlogType> = ({ title, slug, coverImage, brief }) => {
 };
 
 const BlogWrapper = styled.div`
-	/* display: flex;
-	flex-direction: row; */
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;

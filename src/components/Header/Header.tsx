@@ -88,8 +88,6 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
 export default Header;
 
 const HeaderContainer = styled.header`
-	/* background: ${(props) => props.theme.colors.bgClr500}; */
-	/* box-shadow: 0px 0px 5px ${(props) => props.theme.colors.bgClr700}; */
 	padding: 1rem 0;
 	position: sticky;
 	top: 0;

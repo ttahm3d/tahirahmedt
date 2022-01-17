@@ -62,7 +62,7 @@ export const LightTheme = {
 		fontClr500: "hsl(0, 0%, 12%)",
 		fontClr300: "hsl(0, 0%, 64%)",
 		bgClr900: "hsl(0, 0%, 48%)",
-		bgClr700: "hsl(0, 0%, 74%)",
+		bgClr700: "hsl(0, 0%, 92%)",
 		bgClr500: "hsl(0, 0%, 98%)",
 		bgClr300: "hsl(0, 0%, 99%)",
 		white: "hsl(0,0%,100%)",
