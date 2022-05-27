@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { BlogType } from "../../../styles/types";
+import { BlogType } from "../../utils/types/types";
 import { Paragraph } from "../../../styles/globals";
 import { display } from "../../../styles/devices";
 

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { BlogType } from "../styles/types";
+import { BlogType } from "../src/utils/types/types";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Blog from "../src/components/Blog/Blog";
 import {

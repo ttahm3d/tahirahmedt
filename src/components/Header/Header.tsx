@@ -6,7 +6,7 @@ import { GrLinkedin } from "react-icons/gr";
 import { FiSun, FiMenu, FiX, FiGithub } from "react-icons/fi";
 import { IoMdMoon } from "react-icons/io";
 import { display } from "../../../styles/devices";
-import { ThemeToggleType } from "../../../styles/types";
+import { ThemeToggleType } from "../../utils/types/types";
 import { Container, FlexBox } from "../../../styles/globals";
 import logo from "../../assets/logo.svg";
 import { useScreenWidth } from "../../utils/hooks/useScreenWidth";
@@ -38,7 +38,7 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
                 <NavItem onClick={() => setMenuVisible(false)}>
                   <NavLink href="/projects">Projects</NavLink>
                 </NavItem>
-                <FlexBox>
+                <FlexBoxGap>
                   <NavItem onClick={() => setMenuVisible(false)}>
                     <ExtLink
                       href="https://blog.tahirahmedt.com"
@@ -63,7 +63,7 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
                       <FiGithub />
                     </ExtLink>
                   </NavItem>
-                </FlexBox>
+                </FlexBoxGap>
               </NavList>
             </MenuContianer>
           ) : null}
@@ -91,7 +91,8 @@ const HeaderContainer = styled.header`
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  backdrop-filter: blur(0.55rem);
+  background-color: ${(props) => props.theme.colors.blue1};
+  border-bottom: 1px solid ${(props) => props.theme.colors.blue7};
   width: 100%;
   margin: 0 auto;
   font-size: 1.25rem;
@@ -123,7 +124,7 @@ const NavButton = styled.div`
   cursor: pointer;
 
   :focus {
-    border: 1px solid ${(props) => props.theme.colors.primaryClrDk};
+    outline: 1px solid ${(props) => props.theme.colors.blue7};
     border-radius: 1rem;
   }
 `;
@@ -155,6 +156,7 @@ const NavList = styled.ul`
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+  gap: 1rem;
 
   @media ${display.laptop} {
     flex-direction: column;
@@ -167,14 +169,19 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   list-style: none;
-  padding-left: 1.3125rem;
   font-weight: 450;
+  transition: 0.3s ease-in border;
+  border: 2px solid transparent;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primaryClrLt};
+    border-bottom: 2px solid ${(props) => props.theme.colors.blue9};
   }
 `;
 
 const NavLink = styled(Link)``;
 
 const ExtLink = styled.a``;
+
+const FlexBoxGap = styled(FlexBox)`
+  gap: 1rem;
+`;
