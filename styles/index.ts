@@ -27,7 +27,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${(props) => props.theme.colors.blue1};
     color: ${(props) => props.theme.colors.mauve12};
-    transition: all 0.2s ease 0s;
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.5;
     margin:0;

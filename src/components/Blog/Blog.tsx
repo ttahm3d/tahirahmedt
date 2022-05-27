@@ -34,10 +34,10 @@ const BlogWrapper = styled.div`
   border-radius: 0.5rem;
   background: ${({ theme }) => {
     if (theme.title === "light") {
-      return `${theme.colors.slate5}`;
+      return `${theme.colors.slate3}`;
     }
     if (theme.title === "dark") {
-      return `${theme.colors.blue3}`;
+      return `${theme.colors.indigo2}`;
     }
   }};
   border: 1px solid
@@ -46,7 +46,7 @@ const BlogWrapper = styled.div`
         return `${theme.colors.slate7}`;
       }
       if (theme.title === "dark") {
-        return `${theme.colors.blue3}`;
+        return `${theme.colors.indigo7}`;
       }
     }};
 
