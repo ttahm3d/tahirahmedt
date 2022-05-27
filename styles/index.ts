@@ -6,17 +6,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.plum3};
+    background: ${(props) => props.theme.colors.indigo3};
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.colors.plum9};
+    background: ${(props) => props.theme.colors.indigo9};
     background-clip: content-box;
     border-radius: 100vw;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background:  ${(props) => props.theme.colors.plum6};
+    background:  ${(props) => props.theme.colors.indigo6};
   }
 
 
@@ -45,6 +45,10 @@ const GlobalStyles = createGlobalStyle`
 
   img {
     max-width:100%;
+  }
+
+  input, button {
+    font-family: inherit
   }
 
 `;

@@ -3,8 +3,10 @@ import {
   blueDark,
   slate,
   slateDark,
-  plum,
-  plumDark,
+  indigo,
+  indigoDark,
+  orange,
+  orangeDark,
   mauve,
   mauveDark,
 } from "@radix-ui/colors";
@@ -28,9 +30,10 @@ const LightTheme = {
     white: "hsl(0,0%,100%)",
     black: "hsl(0,0%,0%)",
     ...blue,
-    ...plum,
+    ...indigo,
     ...slate,
     ...mauve,
+    ...orange,
   },
 };
 
@@ -53,9 +56,10 @@ const DarkTheme = {
     white: "hsl(0,0%,100%)",
     black: "hsl(0,0%,0%)",
     ...blueDark,
-    ...plumDark,
+    ...indigoDark,
     ...slateDark,
     ...mauveDark,
+    ...orangeDark,
   },
 };
 
