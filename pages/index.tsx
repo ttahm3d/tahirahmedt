@@ -38,7 +38,7 @@ const Home: InferGetServerSidePropsType<typeof getServerSideProps> = ({
         Developer, then moved into a Devops role where I was&nbsp;
         <strong>Rearchitecting</strong> apps to make them&nbsp;
         <strong> cloud compatible</strong> and deploying to&nbsp;
-        <strong>Microsft Azure</strong>.
+        <strong>Microsoft Azure</strong>.
       </Paragraph>
       <PrimaryButton
         href="https://drive.google.com/file/d/1xrrJbpRbTasWyrFXoHzVoN2Zke2N02WT/view?usp=sharing"
@@ -62,14 +62,15 @@ const Home: InferGetServerSidePropsType<typeof getServerSideProps> = ({
 export default Home;
 
 const PrimaryButton = styled.a`
-  padding: 0.5rem 0.75rem;
+  padding: 1rem 2rem;
   display: inline-block;
-  height: 2.5rem;
-  background-color: ${(props) => props.theme.colors.primaryClr};
+  background-color: ${(props) => props.theme.colors.blue9};
+  border-radius: 0.25rem;
   color: ${(props) => props.theme.colors.white};
+  border: 1px solid ${(props) => props.theme.colors.blue7};
 
-  :hover {
-    background-color: ${(props) => props.theme.colors.primaryClrDk};
+  :active {
+    background-color: ${(props) => props.theme.colors.blue6};
   }
 `;
 
@@ -77,12 +78,14 @@ const SecondaryButton = styled.a`
   padding: 0.5rem 0.75rem;
   display: inline-block;
   height: 2.5rem;
-  border: 1px solid ${(props) => props.theme.colors.primaryClr};
-  border-radius: 0.5rem;
+  border: 1px solid ${(props) => props.theme.colors.blue7};
+  background-color: ${(props) => props.theme.colors.blue3};
+  color: ${(props) => props.theme.colors.blue9};
+  border-radius: 0.25rem;
 
   :hover {
-    color: ${(props) => props.theme.colors.white};
-    background-color: ${(props) => props.theme.colors.primaryClrDk};
+    color: ${(props) => props.theme.colors.blue9};
+    background-color: ${(props) => props.theme.colors.blue4};
   }
 `;
 
