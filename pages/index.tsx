@@ -1,13 +1,8 @@
 import Head from "next/head";
 import styled from "styled-components";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { BlogType } from "../src/utils/types/types";
-import {
-  GetStaticProps,
-  InferGetStaticPropsType,
-  GetServerSideProps,
-  InferGetServerSidePropsType,
-} from "next";
+import { BlogType } from "../styles/types";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Blog from "../src/components/Blog/Blog";
 import {
   Container,
@@ -15,9 +10,9 @@ import {
   SubHeading,
   HeroSection,
   Paragraph,
-} from "../src/utils/styles/globals";
+} from "../styles/globals";
 
-import { display } from "../src/utils/styles/devices";
+import { display } from "../styles/devices";
 
 const Home: InferGetServerSidePropsType<typeof getServerSideProps> = ({
   blogsList,
