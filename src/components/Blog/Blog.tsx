@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { BlogType } from "../../utils/types/types";
@@ -30,9 +30,25 @@ const BlogWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 0.5rem;
-  background: ${(props) => props.theme.colors.bgClr700};
+  background: ${({ theme }) => {
+    if (theme.title === "light") {
+      return `${theme.colors.slate5}`;
+    }
+    if (theme.title === "dark") {
+      return `${theme.colors.blue3}`;
+    }
+  }};
+  border: 1px solid
+    ${({ theme }) => {
+      if (theme.title === "light") {
+        return `${theme.colors.slate7}`;
+      }
+      if (theme.title === "dark") {
+        return `${theme.colors.blue3}`;
+      }
+    }};
 
   > div {
     flex: 1;
