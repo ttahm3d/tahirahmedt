@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-  border-top: 1px solid ${(props) => props.theme.colors.bgClr700};
+  border-top: 1px solid ${(props) => props.theme.colors.blue7};
   margin-top: auto;
   padding: 2rem 0;
 `;
@@ -40,5 +40,5 @@ const FooterList = styled.ul`
 
 const FLink = styled(Link)`
   text-decoration: underline;
-  color: ${(props) => props.theme.colors.fontClr700};
+  color: ${(props) => props.theme.colors.slate12};
 `;

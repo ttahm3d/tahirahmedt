@@ -104,7 +104,7 @@ const Navbar = styled.nav`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 1024px;
+  max-width: 56.25rem;
   width: 100%;
   margin: 0 auto;
 `;
@@ -139,8 +139,9 @@ const MenuButton = styled.div`
 
 const MenuContianer = styled.div`
   @media ${display.laptop} {
-    background-color: ${(props) => props.theme.colors.bgClr700};
+    background-color: ${(props) => props.theme.colors.blue1};
     position: absolute;
+    padding: 0 2rem;
     top: 5.5rem;
     left: 0;
     right: 0;
@@ -176,11 +177,21 @@ const NavItem = styled.li`
   &:hover {
     border-bottom: 2px solid ${(props) => props.theme.colors.blue9};
   }
+
+  @media screen and (min-width: 64em) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const NavLink = styled(Link)``;
 
-const ExtLink = styled.a``;
+const ExtLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const FlexBoxGap = styled(FlexBox)`
   gap: 1rem;
