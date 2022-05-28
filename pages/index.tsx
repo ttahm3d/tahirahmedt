@@ -64,13 +64,14 @@ export default Home;
 const PrimaryButton = styled.a`
   padding: 1rem 2rem;
   display: inline-block;
-  background-color: ${(props) => props.theme.colors.blue9};
+  background-color: ${(props) => props.theme.colors.violet9};
   border-radius: 0.25rem;
   color: ${(props) => props.theme.colors.white};
-  border: 1px solid ${(props) => props.theme.colors.blue7};
+  border: 1px solid ${(props) => props.theme.colors.violet7};
+  font-weight: 500;
 
   :active {
-    background-color: ${(props) => props.theme.colors.blue6};
+    background-color: ${(props) => props.theme.colors.violet6};
   }
 `;
 
@@ -78,14 +79,14 @@ const SecondaryButton = styled.a`
   padding: 0.5rem 0.75rem;
   display: inline-block;
   height: 2.5rem;
-  border: 1px solid ${(props) => props.theme.colors.blue7};
-  background-color: ${(props) => props.theme.colors.blue3};
-  color: ${(props) => props.theme.colors.blue9};
+  border: 1px solid ${(props) => props.theme.colors.violet7};
+  background-color: ${(props) => props.theme.colors.violet4};
+  color: ${(props) => props.theme.colors.violet11};
   border-radius: 0.25rem;
 
   :hover {
-    color: ${(props) => props.theme.colors.blue9};
-    background-color: ${(props) => props.theme.colors.blue4};
+    color: ${(props) => props.theme.colors.violet9};
+    background-color: ${(props) => props.theme.colors.violet3};
   }
 `;
 

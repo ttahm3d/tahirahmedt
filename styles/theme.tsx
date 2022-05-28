@@ -9,6 +9,8 @@ import {
   orangeDark,
   mauve,
   mauveDark,
+  violet,
+  violetDark,
 } from "@radix-ui/colors";
 
 const LightTheme = {
@@ -34,6 +36,7 @@ const LightTheme = {
     ...slate,
     ...mauve,
     ...orange,
+    ...violet,
   },
 };
 
@@ -60,6 +63,7 @@ const DarkTheme = {
     ...slateDark,
     ...mauveDark,
     ...orangeDark,
+    ...violetDark,
   },
 };
 
