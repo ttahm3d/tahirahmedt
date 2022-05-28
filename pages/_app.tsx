@@ -9,10 +9,7 @@ import Header from "../src/components/Header/Header";
 import useLocalStorage from "../src/utils/hooks/useLocalStorage";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useLocalStorage(
-    "tahirahmedt_dot_com_mode",
-    "light"
-  );
+  const [theme, setTheme] = useLocalStorage("viewing-mode", "light");
 
   const toggleTheme: () => void = () =>
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -30,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Page>
-        <Header theme={theme.title} toggleTheme={toggleTheme} />
+        <Header theme={theme} toggleTheme={toggleTheme} />
         <Component {...pageProps} />
         <Footer />
       </Page>
