@@ -15,6 +15,8 @@ import { SiHashnode } from "react-icons/si";
 const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
   const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
 
+  console.log(theme);
+
   const [width] = useScreenWidth();
 
   return (
@@ -69,13 +71,9 @@ const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
           ) : null}
           <NavButtons>
             <NavButton onClick={() => toggleTheme()}>
-              {theme === "dark" ? (
-                <FiSun fill="hsl(53,92%,50%)" />
-              ) : (
-                <IoMdMoon fill="hsl(245, 26%, 8%)" />
-              )}
+              {theme === "light" ? <IoMdMoon /> : <FiSun />}
             </NavButton>
-            <MenuButton onClick={() => setMenuVisible(!isMenuVisible)}>
+            <MenuButton onClick={() => setMenuVisible((v) => !v)}>
               {!isMenuVisible ? <FiMenu /> : <FiX />}
             </MenuButton>
           </NavButtons>

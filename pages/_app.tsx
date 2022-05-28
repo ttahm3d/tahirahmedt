@@ -9,7 +9,7 @@ import Header from "../src/components/Header/Header";
 import useLocalStorage from "../src/utils/hooks/useLocalStorage";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useLocalStorage("viewing-mode", "light");
+  const [theme, setTheme] = useLocalStorage("preferred-mode", "light");
 
   const toggleTheme: () => void = () =>
     theme === "light" ? setTheme("dark") : setTheme("light");
