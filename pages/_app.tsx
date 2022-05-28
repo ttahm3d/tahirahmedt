@@ -1,22 +1,24 @@
 import type { AppProps } from "next/app";
 import { Page } from "../styles/globals";
-import { useState } from "react";
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles";
 import { LightTheme, DarkTheme } from "../styles/theme";
 import Footer from "../src/components/Footer/Footer";
 import Head from "next/head";
 import Header from "../src/components/Header/Header";
+import useLocalStorage from "../src/utils/hooks/useLocalStorage";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
+  const [theme, setTheme] = useLocalStorage(
+    "tahirahmedt_dot_com_mode",
+    "light"
+  );
 
-  const toggleTheme = () => {
-    setTheme(theme.title === "light" ? DarkTheme : LightTheme);
-  };
+  const toggleTheme: () => void = () =>
+    theme === "light" ? setTheme("dark") : setTheme("light");
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme === "light" ? LightTheme : DarkTheme}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
