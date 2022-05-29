@@ -11,9 +11,12 @@ import { Container, FlexBox } from "../../../styles/globals";
 import logo from "../../assets/logo.svg";
 import { useScreenWidth } from "../../utils/hooks/useScreenWidth";
 import { SiHashnode } from "react-icons/si";
+import useLocalStorage from "../../utils/hooks/useLocalStorage";
 
-const Header: React.FC<ThemeToggleType> = ({ theme, toggleTheme }) => {
+const Header: React.FC<ThemeToggleType> = ({ toggleTheme }) => {
   const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
+
+  const [theme] = useLocalStorage("preferred-mode");
 
   console.log(theme);
 
