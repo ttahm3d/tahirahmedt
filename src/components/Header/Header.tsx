@@ -18,8 +18,6 @@ const Header: React.FC<ThemeToggleType> = ({ toggleTheme }) => {
 
   const [theme] = useLocalStorage("preferred-mode");
 
-  console.log(theme);
-
   const [width] = useScreenWidth();
 
   return (
