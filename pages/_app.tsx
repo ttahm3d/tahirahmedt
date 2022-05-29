@@ -6,10 +6,10 @@ import { LightTheme, DarkTheme } from "../styles/theme";
 import Footer from "../src/components/Footer/Footer";
 import Head from "next/head";
 import Header from "../src/components/Header/Header";
-import useLocalStorage from "../src/utils/hooks/useLocalStorage";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useLocalStorage("preferred-mode", "light");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme: () => void = () =>
     theme === "light" ? setTheme("dark") : setTheme("light");
