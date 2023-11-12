@@ -1,23 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "@/assets/TALogoTransparent.svg";
+import Logo from "@/assets/tahirahmedt-logo.svg";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Header() {
   const pages = [
     {
-      name: "Home",
-    },
-    {
       name: "Work",
+      path: "/work",
     },
     {
       name: "About",
+      path: "/about",
     },
     {
       name: "Projects",
+      path: "/projects",
     },
   ];
 
@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex ml-auto gap-4 ">
           {pages.map((page) => (
             <div key={page.name}>
-              <Link href="/home"> {page.name}</Link>
+              <Link href={page.path}> {page.name}</Link>
             </div>
           ))}
         </div>

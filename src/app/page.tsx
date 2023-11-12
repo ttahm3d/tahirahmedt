@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/assets/TALogoTransparent.svg";
+import Logo from "@/assets/tahirahmedt-logo.svg";
 
 export default function Page() {
   return (
