@@ -1,9 +1,6 @@
-import Header from "@/components/Header";
+import { Header, Footer } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tahir Ahmed",
@@ -17,9 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="flex flex-col min-h-screen">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
