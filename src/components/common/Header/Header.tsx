@@ -28,9 +28,11 @@ export default function Header() {
 
   return (
     <header className="py-2 px-4">
-      <nav className="flex gap-4 mx-auto items-center max-w-3xl">
+      <nav className="flex gap-4 mx-auto items-center max-w-5xl">
         <div>
-          <Image src={Logo} alt="logo" width={50} height={50} />
+          <Link href="/">
+            <Image src={Logo} alt="logo" width={50} height={50} />
+          </Link>
         </div>
         <div className="hidden lg:flex ml-auto gap-4 bg-inherit items-center justify-center">
           {pages.map((page) => (
