@@ -49,7 +49,7 @@ export default function Header() {
         {/* {openMenu && ( */}
         <div
           className={`lg:hidden flex flex-col ${
-            openMenu && "translate-y-[-100%]"
+            openMenu ? "" : "translate-y-[-100%]"
           } absolute inset-0 gap-8 backdrop-blur-sm bg-slate-200/70 items-center justify-center transition-transform duration-300 ease-in-out`}>
           {pages.map((page) => (
             <div key={page.name} className="text-2xl">
