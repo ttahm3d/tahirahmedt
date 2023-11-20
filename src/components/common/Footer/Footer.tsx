@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
         <div className="col-span-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-start justify-items-center">
           <div>
-            <h4 className="font-semibold pb-4 text-center md:text-left">
+            <h4 className="font-semibold pb-4 text-center md:text-left text-gray-800">
               Pages
             </h4>
             <ul className="flex flex-col gap-2">
@@ -68,7 +68,7 @@ export default function Footer() {
                 <li key={link.path} className="text-center md:text-left">
                   <Link
                     href={link.path}
-                    className="hover:text-gray-400 hover:underline-offset-2 transition-colors text-md">
+                    className="hover:text-fuchsia-600 text-slate-600  hover:underline-offset-2 transition-colors text-md">
                     {link.text}
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold pb-4 text-center md:text-left">
+            <h4 className="font-semibold pb-4 text-center md:text-left text-gray-800">
               Social Links
             </h4>
             <ul className="flex md:justify-start justify-center gap-2">
@@ -85,7 +85,7 @@ export default function Footer() {
                   <a
                     href={link.path}
                     target="_blank"
-                    className="hover:text-gray-400 text-lg hover:underline-offset-2 transition-colors text-md">
+                    className="hover:text-fuchsia-600 text-slate-600  text-lg hover:underline-offset-2 transition-colors text-md">
                     {link.text}
                   </a>
                 </li>

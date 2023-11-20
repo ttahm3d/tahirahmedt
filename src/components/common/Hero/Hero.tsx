@@ -12,16 +12,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[url(/heroblob-mobile.svg)] md:bg-[url(/heroblob-desktop.svg)] min-h-screen h-full bg-[length:60vw_70vh] md:bg-[length:40vw_75vh] bg-right-bottom bg-no-repeat">
+    <section className="bg-[url(/heroblob-mobile.svg)] md:bg-[url(/heroblob-desktop.svg)] min-h-fit h-full bg-[length:60vw_30vh] md:bg-[length:40vw_75vh] bg-right-top bg-no-repeat">
       <div className="max-w-5xl mx-auto">
-        <div className=" w-full md:w-3/5 px-8 pt-16 md:pt-32">
+        <div className=" w-full md:w-3/5 px-8 pt-36 pb-32 md:pb-44">
           <h2 className="text-4xl pb-6 text-gray-600">Hello,</h2>
           <h1 className="text-7xl text-gray-600 font-light">
             I&apos;m&nbsp;
-            <span className="font-bold text-fuchsia-600">Tahir Ahmed</span>
+            <span className="font-bold text-purple-600">Tahir Ahmed</span>
           </h1>
           <p className="pt-4">
-            <span className="font-bold text-purple-600">
+            <span className="font-bold text-fuchsia-600">
               Fullstack Developer
             </span>
             , with <span className="font-bold text-purple-600">5</span> years of
