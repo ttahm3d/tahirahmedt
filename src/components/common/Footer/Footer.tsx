@@ -53,7 +53,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="p-8 mt-auto bg-stone-100">
+    <footer className="p-8 mt-auto bg-gradient-to-br from-slate-200 to-zinc-100">
       <section className="grid md:grid-cols-5 grid-cols-1 max-w-5xl mx-auto">
         <div className="col-span-1 place-self-center">
           <Image src={Logo} alt="logo" width={120} height={120} />

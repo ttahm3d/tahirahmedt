@@ -25,28 +25,31 @@ export default function Skills() {
   ]
 
   return (
-    <section className="max-w-5xl mx-auto pt-12 pb-20  px-8">
-      <p className="pb-6 text-justify">
-        For the most part of my carrier, I&apos;ve been{' '}
-        <span className="font-bold text-fuchsia-600">frontend developer</span>{' '}
-        and started picking up backend technologies and became a{' '}
-        <span className="font-bold text-fuchsia-600">MERN</span> fullstack
-        developer. This transition has helped me broaden my capabilities and
-        understand end-to-end development of web applications. Below are the
-        technologies I&apos;m comfortable and have enjoyed working with
-      </p>
-      <section className="flex flex-wrap gap-8 items-center justify-center">
-        {skillsList.map(({ name, image }) => (
-          <div
-            key={name}
-            title={name}
-            className="p-4 flex bg-gradient-to-br from-fuchsia-100 to-purple-50 rounded-md h-36 w-36 flex-col gap-4 justify-center"
-          >
-            <figure>
-              <Image src={image} alt="name" height={125} width={125} />
-            </figure>
-          </div>
-        ))}
+    <section className="">
+      <section className="max-w-5xl mx-auto pb-32 px-8">
+        <div className="bg-slate-200 w-full h-[1px]"></div>
+        <p className="pb-12 text-lg text-justify pt-32">
+          For the most part of my carrier, I&apos;ve been{' '}
+          <span className="font-bold text-fuchsia-600">frontend developer</span>{' '}
+          and started picking up backend technologies and became a{' '}
+          <span className="font-bold text-fuchsia-600">MERN</span> fullstack
+          developer. This transition has helped me broaden my capabilities and
+          understand end-to-end development of web applications. Below are the
+          technologies I&apos;m comfortable and have enjoyed working with
+        </p>
+        <div className="flex flex-wrap gap-8 items-center justify-center">
+          {skillsList.map(({ name, image }) => (
+            <div
+              key={name}
+              title={name}
+              className="p-4 flex bg-gradient-to-br from-fuchsia-50 to-purple-50 rounded-md h-36 w-36 flex-col gap-4 justify-center"
+            >
+              <figure>
+                <Image src={image} alt="name" height={125} width={125} />
+              </figure>
+            </div>
+          ))}
+        </div>
       </section>
     </section>
   )
