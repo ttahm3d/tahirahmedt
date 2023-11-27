@@ -1,4 +1,8 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
 import azure from '@/assets/skills/azure.svg'
 import js from '@/assets/skills/js.svg'
 import mongodb from '@/assets/skills/mongodb.svg'
@@ -24,33 +28,55 @@ export default function Skills() {
     { name: 'js', image: js },
   ]
 
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+      },
+    },
+  }
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  }
+
   return (
-    <section className="">
-      <section className="max-w-5xl mx-auto pb-32 px-8">
-        <div className="bg-slate-200 w-full h-[1px]"></div>
-        <p className="pb-12 text-lg text-justify pt-32">
-          For the most part of my carrier, I&apos;ve been{' '}
-          <span className="font-bold text-fuchsia-600">frontend developer</span>{' '}
-          and started picking up backend technologies and became a{' '}
-          <span className="font-bold text-fuchsia-600">MERN</span> fullstack
-          developer. This transition has helped me broaden my capabilities and
-          understand end-to-end development of web applications. Below are the
-          technologies I&apos;m comfortable and have enjoyed working with
-        </p>
-        <div className="flex flex-wrap gap-8 items-center justify-center">
-          {skillsList.map(({ name, image }) => (
-            <div
-              key={name}
-              title={name}
-              className="p-4 flex bg-gradient-to-br from-fuchsia-50 to-purple-50 rounded-md h-36 w-36 flex-col gap-4 justify-center"
-            >
-              <figure>
-                <Image src={image} alt="name" height={125} width={125} />
-              </figure>
-            </div>
-          ))}
-        </div>
-      </section>
-    </section>
+    <motion.section className="max-w-5xl mx-auto pb-32 px-8">
+      <div className="bg-slate-200 w-full h-[1px]"></div>
+      <p className="pb-12 text-lg text-justify pt-24">
+        For the most part of my carrier, I&apos;ve been{' '}
+        <span className="font-bold text-fuchsia-600">frontend developer</span>{' '}
+        and started picking up backend technologies and became a{' '}
+        <span className="font-bold text-fuchsia-600">MERN</span> fullstack
+        developer. This transition has helped me broaden my capabilities and
+        understand end-to-end development of web applications. Below are the
+        technologies I&apos;m comfortable and have enjoyed working with
+      </p>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-8 items-center justify-center"
+      >
+        {skillsList.map(({ name, image }) => (
+          <motion.div
+            variants={item}
+            key={name}
+            title={name}
+            className="p-4 flex bg-gradient-to-br from-fuchsia-50 to-purple-50 rounded-md h-36 w-36 flex-col gap-4 justify-center"
+          >
+            <figure>
+              <Image src={image} alt="name" height={125} width={125} />
+            </figure>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
   )
 }
