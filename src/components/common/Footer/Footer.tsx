@@ -1,29 +1,29 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import Logo from "@/assets/tahirahmedt-logo.svg";
-import Link from "next/link";
-import { FaXTwitter } from "react-icons/fa6";
-import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import Image from 'next/image'
+import Logo from '@/assets/tahirahmedt-logo.svg'
+import Link from 'next/link'
+import { FaXTwitter } from 'react-icons/fa6'
+import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai'
 
 export default function Footer() {
   const internalLinks: {
-    text: string;
-    path: string;
+    text: string
+    path: string
   }[] = [
     {
-      text: "Work",
-      path: "/work",
+      text: 'Work',
+      path: '/work',
     },
     {
-      text: "About",
-      path: "/about",
+      text: 'About',
+      path: '/about',
     },
     {
-      text: "Projects",
-      path: "/projects",
+      text: 'Projects',
+      path: '/projects',
     },
-  ];
+  ]
 
   const externalLinks = [
     {
@@ -32,7 +32,7 @@ export default function Footer() {
           <FaXTwitter />
         </>
       ),
-      path: "https://twitter.com/ttahm3d",
+      path: 'https://twitter.com/ttahm3d',
     },
     {
       text: (
@@ -40,7 +40,7 @@ export default function Footer() {
           <AiOutlineGithub />
         </>
       ),
-      path: "https://github.com/ttahm3d",
+      path: 'https://github.com/ttahm3d',
     },
     {
       text: (
@@ -48,12 +48,12 @@ export default function Footer() {
           <AiOutlineLinkedin />
         </>
       ),
-      path: "/projects",
+      path: '/projects',
     },
-  ];
+  ]
 
   return (
-    <footer className="p-8 mt-auto bg-gradient-to-br from-slate-200 to-zinc-100">
+    <footer className="p-8 mt-auto bg-bronze4">
       <section className="grid md:grid-cols-5 grid-cols-1 max-w-5xl mx-auto">
         <div className="col-span-1 place-self-center">
           <Image src={Logo} alt="logo" width={120} height={120} />
@@ -68,7 +68,8 @@ export default function Footer() {
                 <li key={link.path} className="text-center md:text-left">
                   <Link
                     href={link.path}
-                    className="hover:text-fuchsia-600 text-slate-600  hover:underline-offset-2 transition-colors text-md">
+                    className="hover:text-mint11 text-slate-600 hover:underline-offset-2 transition-colors text-md"
+                  >
                     {link.text}
                   </Link>
                 </li>
@@ -85,7 +86,8 @@ export default function Footer() {
                   <a
                     href={link.path}
                     target="_blank"
-                    className="hover:text-fuchsia-600 text-slate-600  text-lg hover:underline-offset-2 transition-colors text-md">
+                    className="hover:text-fuchsia-600 text-slate-600  text-lg hover:underline-offset-2 transition-colors text-md"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -95,5 +97,5 @@ export default function Footer() {
         </div>
       </section>
     </footer>
-  );
+  )
 }

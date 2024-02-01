@@ -69,7 +69,9 @@ export default function Skills() {
             variants={item}
             key={name}
             title={name}
-            className="p-4 flex bg-gradient-to-br from-fuchsia-50 to-purple-50 rounded-md h-36 w-36 flex-col gap-4 justify-center"
+            // flex bg-gradient-to-br from-fuchsia-50 to-purple-50
+            className="p-4 
+            rounded-md h-36 w-36 border-purple-100 border grid place-items-center gap-2"
           >
             <figure>
               <Image src={image} alt="name" height={125} width={125} />

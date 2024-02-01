@@ -13,7 +13,8 @@ export default function Hero() {
   }
 
   return (
-    <section className="bg-[url(/heroblob-mobile.svg)] md:bg-[url(/heroblob-desktop.svg)] min-h-fit bg-[length:100vw_40vh] bg-right-top bg-no-repeat">
+    // <section className="bg-[url(/heroblob-mobile.svg)] md:bg-[url(/heroblob-desktop.svg)] min-h-fit bg-[length:100vw_40vh] bg-right-top bg-no-repeat">
+    <section className="min-h-fit">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -23,27 +24,25 @@ export default function Hero() {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" w-full md:w-3/5 px-8 pt-36 pb-32 md:pb-20"
+          className=" w-full md:w-4/6 px-8 pt-20 pb-20 md:pb-20"
         >
-          <h2 className="text-4xl pb-6 text-gray-600">Hello,</h2>
-          <h1 className="md:text-8xl text-6xl text-gray-600 font-light">
+          <h2 className="text-4xl pb-6 text-mauve12">Hello,</h2>
+          <h1 className="md:text-6xl text-5xl text-mauve12">
             I&apos;m&nbsp;
-            <span className="font-bold text-fuchsia-600">Tahir Ahmed</span>
+            <span className="font-extrabold text-mint11">Tahir Ahmed</span>
           </h1>
-          <p className="pt-8 text-lg font-light">
-            <span className="font-bold text-fuchsia-600">
-              Fullstack Developer
-            </span>
-            , with <span className="font-bold text-fuchsia-600">5</span> years
-            of experience in developing large-scale web apps using{' '}
-            <span className="font-semibold">react</span>,{' '}
-            <span className="font-semibold">nodejs</span>, and{' '}
-            <span className="font-semibold">nextjs</span>
+          <p className="pt-8 text-2xl font-light">
+            <span className="font-bold text-mint12">Fullstack Developer</span>,
+            with <span className="font-bold text-mint12">5</span> years of
+            experience in developing large-scale web apps using{' '}
+            <span className="font-semibold text-mint12">react</span>,{' '}
+            <span className="font-semibold text-mint12">nodejs</span>, and{' '}
+            <span className="font-semibold text-mint12">nextjs</span>
           </p>
-          <div className="flex gap-4 pt-4 items-center">
+          <div className="flex gap-8 pt-12 items-center">
             <button
               onClick={downloadResume}
-              className="bg-purple-600 hover:bg-purple-700 transition-colors text-white px-4 py-2 rounded-md"
+              className="bg-jade9 hover:bg-jade10 hover:ring-2 ring-offset-2 hover:ring-jade7 transition-colors text-white px-4 py-2 rounded-3xl"
             >
               View Resume
             </button>

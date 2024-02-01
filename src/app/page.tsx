@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import Logo from '@/assets/tahirahmedt-logo.svg'
-import { Hero, Skills } from '@/components'
+import { HashnodeBlogs, Hero, Skills } from '@/components'
 import { IBM_Plex_Sans } from 'next/font/google'
 
 // If loading a variable font, you don't need to specify the font weight
@@ -11,9 +9,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export default function Page() {
   return (
-    <main className={ibmPlexSans.className}>
+    <main className={`bg-bronze1 ${ibmPlexSans.className}`}>
       <Hero />
-      <Skills />
+      <HashnodeBlogs />
     </main>
   )
 }
