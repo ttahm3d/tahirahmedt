@@ -1,8 +1,6 @@
 import { Header, Footer } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
-import { ApolloProvider } from '@apollo/client'
-import { client } from '@/apolloClient/apolloClient'
 
 export const metadata: Metadata = {
   title: 'Tahir Ahmed',
