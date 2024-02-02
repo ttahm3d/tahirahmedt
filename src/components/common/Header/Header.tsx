@@ -35,7 +35,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="py-2 px-4 bg-bronze1">
+    <header className="py-2 px-4">
       <nav className="flex gap-4 mx-auto items-center max-w-5xl">
         <div>
           <Link href="/">
@@ -49,7 +49,7 @@ export default function Header() {
                 className={`${
                   pathname === page.path
                     ? 'text-mint11 ring-1 ring-offset-2 ring-mint10'
-                    : 'text-mint12'
+                    : 'text-mauve10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
                 font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
                 href={page.path}
@@ -77,7 +77,7 @@ export default function Header() {
                 className={`${
                   pathname === page.path
                     ? 'text-mint11 ring-1 ring-offset-2 ring-mint10'
-                    : 'text-mint12'
+                    : 'text-mauve10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
                 font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
                 href={page.path}

@@ -27,7 +27,8 @@ export default function Footer() {
 
   const externalLinks = [
     {
-      text: (
+      text: 'twitter',
+      icon: (
         <>
           <FaXTwitter />
         </>
@@ -35,7 +36,8 @@ export default function Footer() {
       path: 'https://twitter.com/ttahm3d',
     },
     {
-      text: (
+      text: 'github',
+      icon: (
         <>
           <AiOutlineGithub />
         </>
@@ -43,56 +45,36 @@ export default function Footer() {
       path: 'https://github.com/ttahm3d',
     },
     {
-      text: (
+      text: 'linkedin',
+      icon: (
         <>
           <AiOutlineLinkedin />
         </>
       ),
-      path: '/projects',
+      path: 'https://www.linkedin.com/in/tahirahmedt/',
     },
   ]
 
   return (
-    <footer className="p-8 mt-auto bg-bronze4">
-      <section className="grid md:grid-cols-5 grid-cols-1 max-w-5xl mx-auto">
-        <div className="col-span-1 place-self-center">
-          <Image src={Logo} alt="logo" width={120} height={120} />
+    <footer className="p-8 mt-auto bg-mint3">
+      <section className="max-w-5xl px-8 mx-auto grid grid-cols-1 md:grid-cols-5 place-items-center">
+        <div className="md:place-self-start md:col-span-1 col-span-1 place-self-center">
+          <Image src={Logo} alt="logo" width={50} height={50} />
         </div>
-        <div className="col-span-4 grid md:grid-cols-2 grid-cols-1 gap-8 items-start justify-items-center">
-          <div>
-            <h4 className="font-semibold pb-4 text-center md:text-left text-gray-800">
-              Pages
-            </h4>
-            <ul className="flex flex-col gap-2">
-              {internalLinks.map((link) => (
-                <li key={link.path} className="text-center md:text-left">
-                  <Link
-                    href={link.path}
-                    className="hover:text-mint11 text-slate-600 hover:underline-offset-2 transition-colors text-md"
-                  >
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold pb-4 text-center md:text-left text-gray-800">
-              Social Links
-            </h4>
-            <ul className="flex md:justify-start justify-center gap-2">
-              {externalLinks.map((link) => (
-                <li key={link.path}>
-                  <a
-                    href={link.path}
-                    target="_blank"
-                    className="hover:text-fuchsia-600 text-slate-600  text-lg hover:underline-offset-2 transition-colors text-md"
-                  >
-                    {link.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="md:col-span-4 md:place-self-end">
+          <div className="flex gap-4 items-center">
+            {externalLinks.map((listItem) => (
+              <div key={listItem.text}>
+                <a
+                  className="text-mauve10 hover:text-mint12 hover:font-medium"
+                  href={listItem.path}
+                  target="_blank"
+                  rel="tahirahmedt.com"
+                >
+                  {listItem.text}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
