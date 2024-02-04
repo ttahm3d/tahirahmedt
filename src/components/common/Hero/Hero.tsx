@@ -13,7 +13,6 @@ export default function Hero() {
   }
 
   return (
-    // <section className="bg-[url(/heroblob-mobile.svg)] md:bg-[url(/heroblob-desktop.svg)] min-h-fit bg-[length:100vw_40vh] bg-right-top bg-no-repeat">
     <section className="min-h-fit">
       <div className="max-w-5xl mx-auto">
         <motion.div
@@ -26,8 +25,8 @@ export default function Hero() {
           }}
           className=" w-full md:w-4/6 px-8 pt-20 pb-20 md:pb-20"
         >
-          <h2 className="text-4xl pb-6 text-mauve12">Hello,</h2>
-          <h1 className="md:text-6xl text-5xl text-mauve12">
+          <h2 className="text-4xl pb-6 text-sage12">Hello,</h2>
+          <h1 className="md:text-6xl text-5xl text-sage12">
             I&apos;m&nbsp;
             <span className="font-extrabold text-mint11">Tahir Ahmed</span>
           </h1>
@@ -42,7 +41,7 @@ export default function Hero() {
           <div className="flex gap-8 pt-12 items-center">
             <button
               onClick={downloadResume}
-              className="bg-jade9 hover:bg-jade10 hover:ring-2 ring-offset-2 hover:ring-jade7 transition-colors text-white px-4 py-2 rounded-3xl"
+              className="bg-jade9 hover:bg-jade10 hover:ring-2 ring-offset-2 hover:ring-jade7 transition-colors text-white rounded-[4px] px-8 py-4"
             >
               View Resume
             </button>

@@ -66,7 +66,7 @@ export default function Footer() {
             {externalLinks.map((listItem) => (
               <div key={listItem.text}>
                 <a
-                  className="text-mauve10 hover:text-mint12 hover:font-medium"
+                  className="text-sage10 hover:text-mint12 hover:font-medium"
                   href={listItem.path}
                   target="_blank"
                   rel="tahirahmedt.com"

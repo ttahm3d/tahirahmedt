@@ -38,23 +38,21 @@ export default function HashnodeBlogs() {
                 </a>
               </h3>
               <div className="flex gap-6 py-2">
-                <small className="text-xs text-mauve10 hover:underline">
+                <small className="text-xs text-sage10 hover:underline">
                   {new Date(post.node.publishedAt).toLocaleDateString('en-US', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric',
                   })}
                 </small>
-                <small className="text-xs text-mauve10 hover:underline">
+                <small className="text-xs text-sage10 hover:underline">
                   {post.node.readTimeInMinutes} minutes
                 </small>
-                <small className="text-xs text-mauve10 hover:underline">
+                <small className="text-xs text-sage10 hover:underline">
                   {post.node.views} views
                 </small>
               </div>
-              <p className="text-mauve10 py-2 text-justify">
-                {post.node.brief}
-              </p>
+              <p className="text-sage10 py-2 text-justify">{post.node.brief}</p>
               <div className="flex gap-2">
                 {post.node.tags.map((tag: any) => (
                   <div

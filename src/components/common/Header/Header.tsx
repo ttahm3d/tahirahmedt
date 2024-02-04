@@ -48,8 +48,8 @@ export default function Header() {
               <Link
                 className={`${
                   pathname === page.path
-                    ? 'text-mint11 ring-1 ring-offset-2 ring-mint10'
-                    : 'text-mauve10'
+                    ? 'text-mint11 ring-1 ring-offset-2 ring-mint11'
+                    : 'text-sage10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
                 font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
                 href={page.path}
@@ -65,7 +65,6 @@ export default function Header() {
         >
           <FaBars />
         </div>
-        {/* {openMenu && ( */}
         <div
           className={`lg:hidden flex flex-col ${
             openMenu ? '' : 'translate-y-[-100%]'
@@ -77,7 +76,7 @@ export default function Header() {
                 className={`${
                   pathname === page.path
                     ? 'text-mint11 ring-1 ring-offset-2 ring-mint10'
-                    : 'text-mauve10'
+                    : 'text-sage10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
                 font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
                 href={page.path}
