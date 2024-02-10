@@ -9,7 +9,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export default function Page() {
   return (
-    <main className={`bg-bronze1 ${ibmPlexSans.className}`}>
+    <main className={`bg-[#0278641a] ${ibmPlexSans.className}`}>
       <Hero />
       <HashnodeBlogs />
     </main>

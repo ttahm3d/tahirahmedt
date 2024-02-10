@@ -8,7 +8,7 @@ export default function Experience() {
         about
       </h1>
       <div className="py-4 text-sage11 flex flex-col gap-8">
-        <p className="text-justify text-xl first-letter:pl-4">
+        <p className="text-justify text-base first-letter:pl-4">
           I&apos;m a{' '}
           <span className="font-bold text-mint11">Fullstack developer</span>{' '}
           currently working at{' '}
@@ -21,7 +21,7 @@ export default function Experience() {
           <span className="font-bold text-mint11">chess</span> or watching
           movies.
         </p>
-        <p className="text-justify text-xl first-letter:pl-4">
+        <p className="text-justify text-base first-letter:pl-4">
           I started my carrier with{' '}
           <span className="font-bold text-mint11">Wipro</span> as a{' '}
           <span className="font-bold text-mint11">Dotnet Developer</span> where
@@ -43,7 +43,7 @@ export default function Experience() {
           <span className="font-bold text-mint11">Devops</span> and studying to
           secure AWS Cloud Practitioner Certification.
         </p>
-        <p className="text-justify text-xl first-letter:pl-4">
+        <p className="text-justify text-base first-letter:pl-4">
           Away from the world of programming, I follow{' '}
           <span className="font-bold text-mint11">formula 1</span>. I used to be
           a fan of Cricket until IPL came and ruined it for me. But sometimes I
@@ -51,9 +51,9 @@ export default function Experience() {
           Counter Strike and DotA Esports and off-late have lost interest in
           both games.
         </p>
-        <p className="text-justify text-xl first-letter:pl-4">
+        <p className="text-justify text-base first-letter:pl-4">
           I&apos;m a big <span className="font-bold text-mint11">foodie</span>.
-          I love south indian cusine especially the
+          I love south indian cusine especially the&nbsp;
           <span className="font-bold text-mint11">darshinis</span>. I really
           like exploring iconic eateries of bengaluru and I&apos;m working on
           something in this space so watch out 👀. I also do a bit of mobile

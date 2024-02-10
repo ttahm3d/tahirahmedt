@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Logo from '@/assets/tahirahmedt-logo.svg'
+import Logo from '@/assets/tahirahmedt-logo-darkbg .svg'
 import Link from 'next/link'
 import { FaXTwitter } from 'react-icons/fa6'
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai'
@@ -56,17 +56,17 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="p-8 mt-auto bg-mint3">
+    <footer className="p-8 mt-auto bg-mint11 text-mint4">
       <section className="max-w-5xl px-8 mx-auto grid grid-cols-1 md:grid-cols-5 place-items-center">
         <div className="md:place-self-start md:col-span-1 col-span-1 place-self-center">
           <Image src={Logo} alt="logo" width={50} height={50} />
         </div>
         <div className="md:col-span-4 md:place-self-end">
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-8 items-center">
             {externalLinks.map((listItem) => (
               <div key={listItem.text}>
                 <a
-                  className="text-sage10 hover:text-mint12 hover:font-medium"
+                  className=" hover:text-sage1 text-lg font-medium"
                   href={listItem.path}
                   target="_blank"
                   rel="tahirahmedt.com"

@@ -23,7 +23,9 @@ export default function HashnodeBlogs() {
       <div className="grid grid-cols-1 gap-8 p-8">
         {blogs?.publication.posts.edges.map((post: any) => (
           <div
-            className="bg-bronze2 grid gap-4 hover:shadow-md transition-colors ease-in-out duration-200 shadow-bronze7 grid-cols-1 md:grid-cols-5 hover:bg-bronze3 p-4 rounded-[4px]"
+            className="bg-mint1 border border-mint6 grid gap-4 
+            hover:shadow-md transition-colors ease-in-out duration-200
+            shadow-mint7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
             key={post.node.id}
           >
             <div className="col-span-3">

@@ -16,16 +16,17 @@ import ts from '@/assets/skills/ts.svg'
 
 export default function Skills() {
   const skillsList = [
-    { name: 'reactjs', image: react },
-    { name: 'nextjs', image: next },
-    { name: 'nodejs', image: node },
-    { name: 'azure', image: azure },
-    { name: 'postgresql', image: postgresql },
-    { name: 'mongodb', image: mongodb },
-    { name: 'tailwind', image: tailwind },
-    { name: 'redux', image: redux },
-    { name: 'ts', image: ts },
-    { name: 'js', image: js },
+    { name: 'React', image: react, showinShortSkills: true },
+    { name: 'NextJS', image: next, showinShortSkills: false },
+    { name: 'NodeJS', image: node, showinShortSkills: true },
+    // { name: 'NodeJS', image: node, showinShortSkills: false },
+    { name: 'Azure', image: azure, showinShortSkills: false },
+    { name: 'PostgreSQL', image: postgresql, showinShortSkills: false },
+    { name: 'MongoDB', image: mongodb, showinShortSkills: false },
+    { name: 'Tailwind CSS', image: tailwind, showinShortSkills: false },
+    { name: 'Redux', image: redux, showinShortSkills: false },
+    { name: 'Typescript', image: ts, showinShortSkills: true },
+    { name: 'JavaScript', image: js, showinShortSkills: true },
   ]
 
   const container = {
@@ -50,12 +51,12 @@ export default function Skills() {
       <div className="bg-slate-200 w-full h-[1px]"></div>
       <p className="pb-12 text-lg text-justify pt-24">
         For the most part of my carrier, I&apos;ve been{' '}
-        <span className="font-bold text-fuchsia-600">frontend developer</span>{' '}
-        and started picking up backend technologies and became a{' '}
-        <span className="font-bold text-fuchsia-600">MERN</span> fullstack
-        developer. This transition has helped me broaden my capabilities and
-        understand end-to-end development of web applications. Below are the
-        technologies I&apos;m comfortable and have enjoyed working with
+        <span className="font-bold text-mint11">frontend developer</span> and
+        started picking up backend technologies and became a{' '}
+        <span className="font-bold text-mint11">MERN</span> fullstack developer.
+        This transition has helped me broaden my capabilities and understand
+        end-to-end development of web applications. Below are the technologies
+        I&apos;m comfortable and have enjoyed working with
       </p>
       <motion.div
         variants={container}
@@ -70,12 +71,12 @@ export default function Skills() {
             key={name}
             title={name}
             // flex bg-gradient-to-br from-fuchsia-50 to-purple-50
-            className="p-4 
-            rounded-md h-36 w-36 border-purple-100 border grid place-items-center gap-2"
+            className="flex gap-2 items-center rounded-full h-16 w-48 justify-center border border-mint7 bg-mint2 p-2"
           >
             <figure>
-              <Image src={image} alt="name" height={125} width={125} />
+              <Image src={image} alt="name" height={45} width={45} />
             </figure>
+            <figcaption>{name}</figcaption>
           </motion.div>
         ))}
       </motion.div>
