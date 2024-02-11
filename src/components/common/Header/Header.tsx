@@ -35,7 +35,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="py-2">
+    <header className="py-2 border-b border-bronze7">
       <nav className="flex gap-4 px-8 mx-auto items-center max-w-5xl">
         <div>
           <Link href="/">

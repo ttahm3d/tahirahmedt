@@ -48,8 +48,7 @@ export default function Skills() {
 
   return (
     <motion.section className="max-w-5xl mx-auto pb-32 px-8">
-      <div className="bg-slate-200 w-full h-[1px]"></div>
-      <p className="pb-12 text-lg text-justify pt-24">
+      <p className="pb-12 text-lg text-justify pt-8">
         For the most part of my carrier, I&apos;ve been{' '}
         <span className="font-bold text-mint11">frontend developer</span> and
         started picking up backend technologies and became a{' '}
@@ -70,8 +69,8 @@ export default function Skills() {
             variants={item}
             key={name}
             title={name}
-            // flex bg-gradient-to-br from-fuchsia-50 to-purple-50
-            className="flex gap-2 items-center rounded-full h-16 w-48 justify-center border border-mint7 bg-mint2 p-2"
+            className="flex gap-2 items-center rounded-full h-12 w-36 
+            justify-center  p-2"
           >
             <figure>
               <Image src={image} alt="name" height={45} width={45} />
