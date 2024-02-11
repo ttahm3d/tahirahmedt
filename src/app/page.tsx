@@ -1,15 +1,8 @@
-import { HashnodeBlogs, Hero, Skills } from '@/components'
-import { IBM_Plex_Sans } from 'next/font/google'
-
-// If loading a variable font, you don't need to specify the font weight
-const ibmPlexSans = IBM_Plex_Sans({
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-})
+import { HashnodeBlogs, Hero } from '@/components'
 
 export default function Page() {
   return (
-    <main className={`bg-mint1 ${ibmPlexSans.className}`}>
+    <main className={`bg-mint1`}>
       <Hero />
       <HashnodeBlogs mode="shorthand" />
     </main>

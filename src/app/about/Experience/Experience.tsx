@@ -1,14 +1,13 @@
 'use client'
-import Image from 'next/image'
+
+import { Paragraph } from '@/components'
 
 export default function Experience() {
-  return (
-    <section className="max-w-5xl mx-auto p-8">
-      <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
-        about
-      </h1>
-      <div className="py-4 text-sage11 flex flex-col gap-8">
-        <p className="text-justify text-base first-letter:pl-4">
+  const paragraphs = [
+    {
+      id: 1,
+      text: (
+        <>
           I&apos;m a{' '}
           <span className="font-bold text-mint11">Fullstack developer</span>{' '}
           currently working at{' '}
@@ -20,8 +19,13 @@ export default function Experience() {
           working, you will find me spending time on my laptop playing{' '}
           <span className="font-bold text-mint11">chess</span> or watching
           movies.
-        </p>
-        <p className="text-justify text-base first-letter:pl-4">
+        </>
+      ),
+    },
+    {
+      id: 2,
+      text: (
+        <>
           I started my carrier with{' '}
           <span className="font-bold text-mint11">Wipro</span> as a{' '}
           <span className="font-bold text-mint11">Dotnet Developer</span> where
@@ -42,31 +46,38 @@ export default function Experience() {
           . I&apos;m currently learning&nbsp;
           <span className="font-bold text-mint11">Devops</span> and studying to
           secure AWS Cloud Practitioner Certification.
-        </p>
-        <p className="text-justify text-base first-letter:pl-4">
+        </>
+      ),
+    },
+    {
+      id: 3,
+      text: (
+        <>
           Away from the world of programming, I follow{' '}
           <span className="font-bold text-mint11">formula 1</span>. I used to be
           a fan of Cricket until IPL came and ruined it for me. But sometimes I
           still watch non-subcontinent Test Matches. Apart from that I follow
           Counter Strike and DotA Esports and off-late have lost interest in
-          both games.
-        </p>
-        <p className="text-justify text-base first-letter:pl-4">
-          I&apos;m a big <span className="font-bold text-mint11">foodie</span>.
-          I love south indian cusine especially the&nbsp;
-          <span className="font-bold text-mint11">darshinis</span>. I really
-          like exploring iconic eateries of bengaluru and I&apos;m working on
+          both games. I&apos;m a{' '}
+          <span className="font-bold text-mint11">foodie</span> in my own way -
+          one who loves south indian cusine especially the&nbsp;
+          <span className="font-bold text-mint11">darshini</span> culture. like
+          to explore iconic eateries of bengaluru and I&apos;m working on
           something in this space so watch out 👀. I also do a bit of mobile
           photography.
-        </p>
-      </div>
-      <div>
-        {/* <Image
-          src="https://photos.app.goo.gl/xom4MkJyuAxu84fw8"
-          alt="monkey park"
-          width="500"
-          height="500"
-        /> */}
+        </>
+      ),
+    },
+  ]
+  return (
+    <section className="md:max-w-3xl mx-auto p-8">
+      <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
+        about
+      </h1>
+      <div className="py-4 text-sage11 flex flex-col gap-8">
+        {paragraphs.map(({ id, text }) => (
+          <Paragraph key={id}>{text}</Paragraph>
+        ))}
       </div>
     </section>
   )
