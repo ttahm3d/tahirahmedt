@@ -95,7 +95,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                 key={post.node.id}
                 className="p-4 hover:bg-mint2 hover:border border border-mint5 rounded-md transition-all ease-linear hover:border-mint7"
               >
-                <h3 className="text-lg text-mint12 font-medium py-2">
+                <h3 className="text-lg text-mint12 font-medium pb-2">
                   <a
                     href={post.node.url}
                     target="_blank"
