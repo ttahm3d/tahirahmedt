@@ -9,9 +9,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export default function Page() {
   return (
-    <main className={`bg-[#0278641a] ${ibmPlexSans.className}`}>
+    <main className={`bg-mint1 ${ibmPlexSans.className}`}>
       <Hero />
-      <HashnodeBlogs />
+      <HashnodeBlogs mode="shorthand" />
     </main>
   )
 }

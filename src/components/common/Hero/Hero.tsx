@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-fit">
+    <section className="bg-[#0278641a] min-h-fit">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
