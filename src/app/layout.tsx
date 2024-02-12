@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ibmPlexSans.className} flex flex-col min-h-screen`}>
+      <body
+        className={`${ibmPlexSans.className} flex flex-col bg-sage1 min-h-screen`}
+      >
         <Header />
         <>{children}</>
         <Footer />

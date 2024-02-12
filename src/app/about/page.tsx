@@ -2,19 +2,6 @@
 
 import { Paragraph } from '@/components'
 
-/**
- * 
- In the
-          process, I got my first{' '}
-          <span className="font-bold text-mint11">
-            Microsoft Azure Fundamentals AZ-900
-          </span>{' '}
-          certification. I recently cleared{' '}
-          <span className="font-bold text-mint11">
-            Microsoft Azure Developer Associate AZ-204
-          </span>
- */
-
 export default function Page() {
   const paragraphs = [
     {
@@ -74,7 +61,7 @@ export default function Page() {
     },
   ]
   return (
-    <main className="bg-mint1">
+    <main>
       <section className="md:max-w-3xl mx-auto p-8">
         <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
           about

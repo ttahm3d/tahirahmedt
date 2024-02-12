@@ -57,7 +57,7 @@ export default function Page() {
     },
   ]
   return (
-    <main className="bg-mint1">
+    <main>
       <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
         work
       </h1>
