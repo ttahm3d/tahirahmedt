@@ -56,17 +56,17 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="p-8 mt-auto bg-mint11 text-mint4">
+    <footer className="p-8 mt-auto bg-mint11">
       <section className="max-w-5xl px-8 mx-auto grid grid-cols-1 md:grid-cols-5 place-items-center">
         <div className="md:place-self-start md:col-span-1 col-span-1 place-self-center">
           <Image src={Logo} alt="logo" width={50} height={50} />
         </div>
-        <div className="md:col-span-4 md:place-self-end">
+        <div className="md:col-span-4 md:place-self-end md:p-0 pt-4">
           <div className="flex gap-8 items-center">
             {externalLinks.map((listItem) => (
               <div key={listItem.text}>
                 <a
-                  className=" hover:text-slate1 text-lg font-medium"
+                  className="hover:text-white text-lg font-medium text-slate6"
                   href={listItem.path}
                   target="_blank"
                   rel="tahirahmedt.com"
