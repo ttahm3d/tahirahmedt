@@ -49,7 +49,7 @@ export default function Skills() {
   return (
     <motion.section className="max-w-3xl mx-auto pb-16 px-8">
       <p className="pb-12 text-lg text-justify pt-8">
-        For the most part of my carrier, I&apos;ve been{' '}
+        For the most part of my career, I&apos;ve been{' '}
         <span className="font-bold text-mint11">frontend developer</span> and
         started picking up backend technologies and became a{' '}
         <span className="font-bold text-mint11">MERN</span> fullstack developer.

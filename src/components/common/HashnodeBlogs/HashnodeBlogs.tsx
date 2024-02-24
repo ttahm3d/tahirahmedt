@@ -89,12 +89,12 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
             ))}
           </div>
         ) : (
-          <div className="flex py-4 p-8 gap-3 md:w-4/6 flex-col mx-auto">
+          <div className="flex py-4 p-8 gap-8 md:w-4/6 flex-col mx-auto">
             {blogs?.publication.posts.edges.map((post: any) => (
               <div
                 key={post.node.id}
-                className="p-4  hover:bg-slate4 hover:border 
-                border border-slate7 rounded-[4px] transition-all ease-linear hover:border-slate8"
+                className="p-4 hover:border bg-white rounded-[4px] transition-all
+                border border-slate6  ease-linear hover:border-slate8"
               >
                 <h3 className="text-lg text-mint12 font-medium pb-2">
                   <a
