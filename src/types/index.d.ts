@@ -27,6 +27,15 @@ interface IWorkExperience {
   skills: Array<Skill | string>
 }
 
+interface IProject {
+  name: string
+  description: string
+  category?: 'personal' | 'work'
+  github: string
+  live: string
+  techStack: Array<Skill>
+}
+
 type Skill =
   | 'react'
   | 'nextjs'
@@ -45,3 +54,5 @@ type Skill =
   | 'react-charts'
   | 'typescript'
   | 'nodejs'
+  | 'styled-components'
+  | 'redux'
