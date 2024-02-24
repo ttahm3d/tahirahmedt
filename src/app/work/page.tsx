@@ -2,8 +2,6 @@
 
 import { Skills, TimelineCard } from '@/components'
 
-// If loading a variable font, you don't need to specify the font weight
-
 export default function Page() {
   const workExperience: Array<IWorkExperience> = [
     {
@@ -57,7 +55,7 @@ export default function Page() {
     },
   ]
   return (
-    <main>
+    <main className="pb-12">
       <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
         work
       </h1>
@@ -66,7 +64,7 @@ export default function Page() {
         <h2 className="text-center text-mint12 font-semibold text-5xl pb-8">
           Experience
         </h2>
-        <div className="flex gap-8 flex-col">
+        <div className="flex flex-col">
           {workExperience.map((w) => (
             <TimelineCard key={w.org} work={w} />
           ))}

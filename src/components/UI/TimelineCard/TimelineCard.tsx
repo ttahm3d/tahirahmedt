@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface ITimelineCard {
   work: IWorkExperience
@@ -8,8 +9,13 @@ interface ITimelineCard {
 
 export default function TimelineCard({ work }: ITimelineCard) {
   const [showDescription, setShowDescription] = useState<boolean>(false)
+  const toggleShowDescription = () => setShowDescription((t) => !t)
   return (
-    <article className="md:p-6 pl-8 bg-white border-slate6 border rounded-[4px] transition-all">
+    <article
+      className={`md:p-6 p-4 bg-white border rounded-[4px] transition-all ${
+        showDescription ? 'border-l-2 border-l-mint11' : 'border-slate6 '
+      }`}
+    >
       <section className="grid grid-cols-12 items-center">
         <div className="flex justify-between items-baseline py-2 col-span-10">
           <div>
@@ -22,30 +28,46 @@ export default function TimelineCard({ work }: ITimelineCard) {
             {work.startPeriod} - {work.isCurrent ? 'Present' : work.endPeriod}
           </p>
         </div>
-        <div className="col-span-2 justify-self-end">
+        <div
+          className="col-span-2 justify-self-end"
+          onClick={toggleShowDescription}
+        >
           {showDescription ? <Minus /> : <Plus />}
         </div>
       </section>
-      <section>
-        <div>
-          {work.shortDescription.map((d, i) => (
-            <li className="text-sm py-1 list-inside text-justify" key={i}>
-              {d}
-            </li>
-          ))}
-        </div>
-        <div className="flex flex-wrap gap-2 py-2">
-          {work.skills.map((tag: any) => (
-            <div
-              className="text-xs grid place-items-center
-              font-medium py-1 px-2 bg-mint3 text-mint12 border rounded-3xl border-mint6"
-              key={tag}
-            >
-              {tag}
+      <AnimatePresence>
+        {showDescription && (
+          <motion.section
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { height: 'fit-content' },
+              collapsed: { height: 0 },
+            }}
+            className="pl-8"
+          >
+            <div>
+              {work.shortDescription.map((d, i) => (
+                <li className="text-sm py-1 list-inside text-justify" key={i}>
+                  {d}
+                </li>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+            <div className="flex flex-wrap gap-2 py-2">
+              {work.skills.map((tag: any) => (
+                <div
+                  className="text-xs grid place-items-center
+              font-medium py-1 px-2 bg-mint3 text-mint12 border rounded-3xl border-mint6"
+                  key={tag}
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
     </article>
   )
 }
