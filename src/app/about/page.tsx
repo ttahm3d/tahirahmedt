@@ -66,7 +66,7 @@ export default function Page() {
         <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
           about
         </h1>
-        <div className="py-4 text-sage11 flex flex-col gap-8">
+        <div className="py-4 text-slate11 flex flex-col gap-8">
           {paragraphs.map(({ id, text }) => (
             <Paragraph key={id}>{text}</Paragraph>
           ))}

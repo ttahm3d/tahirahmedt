@@ -29,7 +29,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
           <div className="grid grid-cols-1 gap-8 p-8">
             {blogs?.publication.posts.edges.map((post: any) => (
               <div
-                className="bg-bronze1 border border-sage7 grid gap-4 
+                className="bg-bronze1 border border-slate7 grid gap-4 
             hover:shadow-lg transition-all ease-in-out duration-200
             shadow-mint7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
                 key={post.node.id}
@@ -46,7 +46,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                     </a>
                   </h3>
                   <div className="flex gap-6 py-2">
-                    <small className="text-xs text-sage10 hover:underline">
+                    <small className="text-xs text-slate10 hover:underline">
                       {new Date(post.node.publishedAt).toLocaleDateString(
                         'en-US',
                         {
@@ -56,14 +56,14 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                         },
                       )}
                     </small>
-                    <small className="text-xs text-sage10 hover:underline">
+                    <small className="text-xs text-slate10 hover:underline">
                       {post.node.readTimeInMinutes} minutes
                     </small>
-                    <small className="text-xs text-sage10 hover:underline">
+                    <small className="text-xs text-slate10 hover:underline">
                       {post.node.views} views
                     </small>
                   </div>
-                  <p className="text-sage10 py-2 text-justify">
+                  <p className="text-slate10 py-2 text-justify">
                     {post.node.brief}
                   </p>
                   <div className="flex gap-2">
@@ -93,7 +93,8 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
             {blogs?.publication.posts.edges.map((post: any) => (
               <div
                 key={post.node.id}
-                className="p-4 hover:bg-mint2 hover:border border border-mint5 rounded-md transition-all ease-linear hover:border-mint7"
+                className="p-4  hover:bg-slate4 hover:border 
+                border border-slate7 rounded-[4px] transition-all ease-linear hover:border-slate8"
               >
                 <h3 className="text-lg text-mint12 font-medium pb-2">
                   <a
@@ -109,7 +110,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                   {post.node.tags.map((tag: any) => (
                     <div
                       className="text-xs grid place-items-center 
-                      font-medium py-1 px-2 bg-mint3 text-mint12 border rounded-3xl border-mint6"
+                      font-medium py-1 px-2 bg-mint3 text-mint11 border-2 rounded-3xl border-mint6"
                       key={tag.id}
                     >
                       {tag.name}

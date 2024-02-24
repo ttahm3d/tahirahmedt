@@ -4,11 +4,11 @@ interface ITimelineCard {
 
 export default function TimelineCard({ work }: ITimelineCard) {
   return (
-    <article className="md:px-8 hover:bg-mint2 transition-all">
+    <article className="md:p-4 border-slate7 border rounded-[4px] hover:bg-slate4 transition-all">
       <div className="flex justify-between items-baseline py-2">
         <div>
           <h2 className="text-2xl text-mint12 font-semibold">{work.org}</h2>
-          <small className="text-sm italic text-sage11">{work.location}</small>
+          <small className="text-sm italic text-slate11">{work.location}</small>
         </div>
         <p className=" italic">
           {work.startPeriod} - {work.isCurrent ? 'Present' : work.endPeriod}
