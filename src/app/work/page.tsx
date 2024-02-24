@@ -56,7 +56,7 @@ export default function Page() {
   ]
   return (
     <main className="pb-12">
-      <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
+      <h1 className="text-7xl text-center font-semibold text-mint12 py-8">
         work
       </h1>
       <Skills />

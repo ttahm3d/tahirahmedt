@@ -63,7 +63,7 @@ export default function Page() {
   return (
     <main>
       <section className="md:max-w-3xl mx-auto p-8">
-        <h1 className="text-8xl text-center font-semibold text-mint12 py-8">
+        <h1 className="text-7xl text-center font-semibold text-mint12 py-8">
           about
         </h1>
         <div className="py-4 text-slate11 flex flex-col gap-8">
