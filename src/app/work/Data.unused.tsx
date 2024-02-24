@@ -1,0 +1,71 @@
+const workExperience: IExperienceProps[] = [
+  {
+    org: 'Pricewaterhouse Coopers',
+    location: 'Bengaluru, India',
+    startPeriod: 'Aug 2021',
+    isCurrent: true,
+    roles: [
+      {
+        roleId: 1,
+        roleTitle: 'Frontend Developer',
+        projectTitle: 'AppKit Enahancement',
+        startDate: 'Nov 2023',
+        isCurrentlyRunnning: true,
+        skillsUtilized: ['react', 'CSS', 'SASS', 'JavaScript', 'storybook'],
+        responsibilities: [
+          'Updated internal component library, AppKit, from v3 to v4',
+          'Made use of Compound Component pattern for enhanced API usability.',
+        ],
+      },
+      {
+        roleId: 2,
+        roleTitle: 'Frontend Developer',
+        projectTitle: 'GenAI - Market Intelligence',
+        skillsUtilized: ['react', 'mui', 'JavaScript', 'storybook'],
+        startDate: 'Nov 2023',
+        isCurrentlyRunnning: true,
+        responsibilities: [
+          'Developed UI of Market Intelligence - a tool that collects information from internet about the new investments that are being made by competitors.',
+          'Created graphs for displaing various inferences drawn from data',
+        ],
+      },
+      {
+        roleId: 3,
+        roleTitle: 'Fullstack Developer',
+        projectClient: 'Sompo Holdings',
+        startDate: 'Mar 2023',
+        endDate: 'Oct 2023',
+        skillsUtilized: [
+          'react',
+          'mui',
+          'storybook',
+          'typescript',
+          'nodejs',
+          'SQL',
+          'Azure',
+        ],
+        responsibilities: [
+          'Developed a tool to perform pre-market entry survey which aims to provide elderly care.',
+          'Developed customized components and seamlessly integrated them with Storybook for streamlined design collaboration.',
+          'Designed and implemented RESTful APIs using Node.js and Express framework. Utilized Sequelize ORM to interact with the database and manage data models.',
+          'Developed an in-app messaging feature to facilitate communication between different entities.',
+        ],
+      },
+      {
+        roleId: 4,
+        roleTitle: 'Frontend Developer',
+        projectClient: 'Nations Benefit',
+        projectTitle: 'Flex Configuration Tool',
+        startDate: 'July 2022',
+        endDate: 'Feb 2023',
+        skillsUtilized: ['react', 'mui', 'storybook', 'JavaScript'],
+        responsibilities: [
+          'Developed a tool to create and validate plans for Flexcards, which reduced processing time by 150 hours',
+          'Developed customized components and seamlessly integrated them with Storybook for streamlined design collaboration.',
+          'Designed and implemented RESTful APIs using Node.js and Express framework. Utilized Sequelize ORM to interact with the database and manage data models.',
+          'Developed an in-app messaging feature to facilitate communication between different entities.',
+        ],
+      },
+    ],
+  },
+]
