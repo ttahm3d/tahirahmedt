@@ -69,13 +69,13 @@ export default function Skills() {
             variants={item}
             key={name}
             title={name}
-            className="flex gap-2 items-center rounded-full h-12 w-36 
-            justify-center  p-2"
+            className="flex gap-2 items-center h-12 w-36 
+            justify-center  p-3"
           >
             <figure>
               <Image src={image} alt="name" height={45} width={45} />
             </figure>
-            <figcaption>{name}</figcaption>
+            <figcaption className="text-sm text-center">{name}</figcaption>
           </motion.div>
         ))}
       </motion.div>
