@@ -106,7 +106,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                     {post.node.title}&nbsp;
                   </a>
                 </h3>
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                   {post.node.tags.map((tag: any) => (
                     <div
                       className="text-xs grid place-items-center 

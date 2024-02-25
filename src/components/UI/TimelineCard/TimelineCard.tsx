@@ -17,19 +17,19 @@ export default function TimelineCard({ work }: ITimelineCard) {
       }`}
     >
       <section className="grid grid-cols-12 items-center">
-        <div className="flex justify-between items-baseline py-2 col-span-10">
+        <div className="py-2 col-span-10">
           <div>
-            <h2 className="text-2xl text-mint12 font-semibold">{work.org}</h2>
+            <h2 className="text-lg text-mint12 font-semibold">{work.org}</h2>
             <small className="text-sm italic text-slate11">
               {work.location}
             </small>
           </div>
-          <p className=" italic">
+          <p className="italic">
             {work.startPeriod} - {work.isCurrent ? 'Present' : work.endPeriod}
           </p>
         </div>
         <div
-          className="col-span-2 justify-self-end"
+          className="col-span-2 justify-self-end text-mint12 rounded-full border border-mint11"
           onClick={toggleShowDescription}
         >
           {showDescription ? <Minus /> : <Plus />}
