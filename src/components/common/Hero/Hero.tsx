@@ -5,7 +5,7 @@ import { SiPeerlist } from 'react-icons/si'
 import { motion } from 'framer-motion'
 
 const RESUME_URL =
-  'https://drive.google.com/file/d/1k5QqzTkr-BWEdshWCpsRaAEptWAtUR7X/view?usp=sharing'
+  'https://drive.google.com/file/d/1ngisAQpBVt41hhO3oCx22dw9AShHmfcK/view?usp=drive_link'
 
 export default function Hero() {
   const downloadResume = () => {
