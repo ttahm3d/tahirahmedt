@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="bg-[#0278641a] min-h-fit">
+    <section className="bg-[#0000FF07] min-h-fit">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -28,20 +28,20 @@ export default function Hero() {
           <h2 className="text-4xl pb-6 text-slate12">Hello,</h2>
           <h1 className="md:text-6xl text-5xl text-slate12">
             I&apos;m&nbsp;
-            <span className="font-extrabold text-mint11">Tahir Ahmed</span>
+            <span className="font-extrabold text-iris11">Tahir Ahmed</span>
           </h1>
           <p className="pt-8 text-2xl font-light">
-            <span className="font-bold text-mint12">Fullstack Developer</span>,
-            with <span className="font-bold text-mint12">5</span> years of
+            <span className="font-bold text-iris12">Fullstack Developer</span>,
+            with <span className="font-bold text-iris12">5</span> years of
             experience in developing large-scale web apps using{' '}
-            <span className="font-semibold text-mint12">react</span>,{' '}
-            <span className="font-semibold text-mint12">nodejs</span>, and{' '}
-            <span className="font-semibold text-mint12">nextjs</span>
+            <span className="font-semibold text-iris12">react</span>,{' '}
+            <span className="font-semibold text-iris12">nodejs</span>, and{' '}
+            <span className="font-semibold text-iris12">nextjs</span>
           </p>
           <div className="flex gap-8 pt-12 items-center">
             <button
               onClick={downloadResume}
-              className="bg-jade9 hover:bg-jade10 hover:ring-2 ring-offset-2 hover:ring-jade7 transition-colors text-white rounded-[4px] px-8 py-4"
+              className="bg-iris9 hover:bg-iris10 hover:ring-2 ring-offset-2 hover:ring-iris7 transition-colors text-white rounded-[4px] px-8 py-4"
             >
               View Resume
             </button>
