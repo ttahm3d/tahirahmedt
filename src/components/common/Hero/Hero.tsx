@@ -23,7 +23,7 @@ export default function Hero() {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" w-full md:w-4/6 px-8 pt-20 pb-20 md:pb-20"
+          className=" w-full  px-8 pt-20 pb-20 md:pb-20"
         >
           <h2 className="text-4xl pb-6 text-slate12">Hello,</h2>
           <h1 className="md:text-6xl text-5xl text-slate12">
