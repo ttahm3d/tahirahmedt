@@ -48,10 +48,10 @@ export default function Header() {
               <Link
                 className={`${
                   pathname === page.path
-                    ? 'text-mint11 ring-1 ring-offset-2 ring-mint11'
+                    ? 'text-iris11 ring-1 ring-offset-2 ring-iris11'
                     : 'text-slate10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
-                font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
+                font-medium hover:text-iris11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-iris7`}
                 href={page.path}
               >
                 {page.name}
@@ -75,10 +75,10 @@ export default function Header() {
               <Link
                 className={`${
                   pathname === page.path
-                    ? 'text-mint11 ring-1 ring-offset-2 ring-mint10'
+                    ? 'text-iris11 ring-1 ring-offset-2 ring-iris10'
                     : 'text-slate10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
-                font-medium hover:text-mint11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-jade7`}
+                font-medium hover:text-iris11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-iris7`}
                 href={page.path}
                 onClick={toggleMenu}
               >

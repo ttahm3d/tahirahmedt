@@ -18,10 +18,9 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
     getBlogposts()
   }, [])
 
-  console.log(mode === 'full')
   return (
     <section className="max-w-5xl mx-auto pt-12 pb-16 min-h-[100px]">
-      <h1 className="text-4xl font-bold text-center text-mint12">
+      <h1 className="text-4xl font-bold text-center text-iris12">
         Blogs on Hashnode
       </h1>
       <>
@@ -31,16 +30,16 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
               <div
                 className="bg-bronze1 border border-slate7 grid gap-4 
             hover:shadow-lg transition-all ease-in-out duration-200
-            shadow-mint7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
+            shadow-iris7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
                 key={post.node.id}
               >
                 <div className="md:col-span-3">
-                  <h3 className="text-lg text-mint12 font-medium">
+                  <h3 className="text-lg text-iris12 font-medium">
                     <a
                       href={post.node.url}
                       target="_blank"
                       rel="tahirahmedt.com"
-                      className="cursor-pointer hover:underline decoration-mint12"
+                      className="cursor-pointer hover:underline decoration-iris12"
                     >
                       {post.node.title}
                     </a>
@@ -69,7 +68,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                   <div className="flex gap-2">
                     {post.node.tags.map((tag: any) => (
                       <div
-                        className="text-xs grid place-items-center font-medium py-1 px-2 bg-mint3 text-mint12 border rounded-3xl border-mint6"
+                        className="text-xs grid place-items-center font-medium py-1 px-2 bg-iris3 text-iris12 border rounded-3xl border-iris6"
                         key={tag.id}
                       >
                         {tag.name}
@@ -89,19 +88,19 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
             ))}
           </div>
         ) : (
-          <div className="flex py-4 p-8 gap-8 md:w-4/6 flex-col mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 pt-12 p-8 gap-8 mx-auto">
             {blogs?.publication.posts.edges.map((post: any) => (
               <div
                 key={post.node.id}
-                className="p-4 hover:border bg-white rounded-[4px] transition-all
+                className="p-4 hover:border bg-white rounded-[4px] transition-all flex flex-col justify-between
                 border border-slate6  ease-linear hover:border-slate8"
               >
-                <h3 className="text-lg text-mint12 font-medium pb-2">
+                <h3 className="text-lg text-iris12 font-medium pb-2">
                   <a
                     href={post.node.url}
                     target="_blank"
                     rel="tahirahmedt.com"
-                    className="cursor-pointer hover:underline decoration-mint12"
+                    className="cursor-pointer hover:underline decoration-iris12"
                   >
                     {post.node.title}&nbsp;
                   </a>
@@ -110,7 +109,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                   {post.node.tags.map((tag: any) => (
                     <div
                       className="text-xs grid place-items-center 
-                      font-medium py-1 px-2 bg-mint3 text-mint11 border-2 rounded-3xl border-mint6"
+                      font-medium py-1 px-2 bg-iris3 text-iris11 border-2 rounded-3xl border-iris6"
                       key={tag.id}
                     >
                       {tag.name}
@@ -127,7 +126,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
           target="_blank"
           rel="tahirahmedt.com"
           href="https://blog.tahirahmedt.com"
-          className="bg-white border cursor-pointer  border-mint7 hover:text-white hover:bg-jade10 hover:ring-2 ring-offset-2 hover:ring-jade7 transition-colors text-mint12 px-4 py-2 rounded-3xl"
+          className="bg-white border cursor-pointer  border-iris7 hover:text-white hover:bg-iris10 hover:ring-2 ring-offset-2 hover:ring-iris7 transition-colors text-iris12 px-4 py-2 rounded-3xl"
         >
           Read all articles
         </a>

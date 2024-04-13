@@ -1,10 +1,11 @@
 import { Header, Footer } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Hind_Madurai } from 'next/font/google'
 
-const ibmPlexSans = IBM_Plex_Sans({
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
+const ibmPlexSans = Hind_Madurai({
+  weight: ['300', '400', '500', '600', '700'],
+  // weight: ['400', '700'],
   subsets: ['latin'],
 })
 export const metadata: Metadata = {
