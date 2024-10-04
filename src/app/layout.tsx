@@ -1,4 +1,4 @@
-import { Header, Footer } from '@/components'
+import { Header, Footer, ThemeProvider } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Hind_Madurai } from 'next/font/google'
@@ -21,11 +21,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexSans.className} flex flex-col bg-slate2 min-h-screen`}
+        className={`${ibmPlexSans.className} flex flex-col bg-red-1 min-h-screen`}
       >
-        <Header />
-        <>{children}</>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          enableSystem
+        >
+          {/* <div className="absolute inset-0  "></div> */}
+          <main className="bg-gradient-to-b from-15% from-red-5 dark:from-red-4 to-transparent h-96">
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -50,9 +50,9 @@ export default function Skills() {
     <motion.section className="max-w-3xl mx-auto pb-16 px-8">
       <p className="pb-12 text-lg text-justify pt-8">
         For the most part of my career, I&apos;ve been{' '}
-        <span className="font-bold text-iris11">frontend developer</span> and
+        <span className="font-bold text-red-11">frontend developer</span> and
         started picking up backend technologies and became a{' '}
-        <span className="font-bold text-iris11">MERN</span> fullstack developer.
+        <span className="font-bold text-red-11">MERN</span> fullstack developer.
         This transition has helped me broaden my capabilities and understand
         end-to-end development of web applications. Below are the technologies
         I&apos;m comfortable and have enjoyed working with

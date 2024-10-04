@@ -13,13 +13,13 @@ export default function TimelineCard({ work }: ITimelineCard) {
   return (
     <article
       className={`md:p-6 p-4 bg-white border rounded-[4px] transition-all ${
-        showDescription ? 'border-l-2 border-l-iris11' : 'border-slate6 '
+        showDescription ? 'border-l-2 border-l-red-11' : 'border-slate6 '
       }`}
     >
       <section className="grid grid-cols-12 items-center">
         <div className="py-2 col-span-10">
           <div>
-            <h2 className="text-lg text-iris12 font-semibold">{work.org}</h2>
+            <h2 className="text-lg text-red-12 font-semibold">{work.org}</h2>
             <small className="text-sm italic text-slate11">
               {work.location}
             </small>
@@ -29,7 +29,7 @@ export default function TimelineCard({ work }: ITimelineCard) {
           </p>
         </div>
         <div
-          className="col-span-2 justify-self-end text-iris12 rounded-full border border-iris11"
+          className="col-span-2 justify-self-end text-red-12 rounded-full border border-red-11"
           onClick={toggleShowDescription}
         >
           {showDescription ? <Minus /> : <Plus />}
@@ -58,7 +58,7 @@ export default function TimelineCard({ work }: ITimelineCard) {
               {work.skills.map((tag: any) => (
                 <div
                   className="text-xs grid place-items-center
-              font-medium py-1 px-2 bg-iris3 text-iris12 border rounded-3xl border-iris6"
+              font-medium py-1 px-2 bg-red-3 text-red-12 border rounded-3xl border-red-6"
                   key={tag}
                 >
                   {tag}

@@ -20,7 +20,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
 
   return (
     <section className="max-w-5xl mx-auto pt-12 pb-16 min-h-[100px]">
-      <h1 className="text-4xl font-bold text-center text-iris12">
+      <h1 className="text-4xl font-bold text-center text-red-12">
         Blogs on Hashnode
       </h1>
       <>
@@ -30,16 +30,16 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
               <div
                 className="bg-bronze1 border border-slate7 grid gap-4 
             hover:shadow-lg transition-all ease-in-out duration-200
-            shadow-iris7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
+            shadow-red-7 grid-cols-1 md:grid-cols-5  p-4 rounded-lg"
                 key={post.node.id}
               >
                 <div className="md:col-span-3">
-                  <h3 className="text-lg text-iris12 font-medium">
+                  <h3 className="text-lg text-red-12 font-medium">
                     <a
                       href={post.node.url}
                       target="_blank"
                       rel="tahirahmedt.com"
-                      className="cursor-pointer hover:underline decoration-iris12"
+                      className="cursor-pointer hover:underline decoration-red-12"
                     >
                       {post.node.title}
                     </a>
@@ -68,7 +68,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                   <div className="flex gap-2">
                     {post.node.tags.map((tag: any) => (
                       <div
-                        className="text-xs grid place-items-center font-medium py-1 px-2 bg-iris3 text-iris12 border rounded-3xl border-iris6"
+                        className="text-xs grid place-items-center font-medium py-1 px-2 bg-red-3 text-red-12 border rounded-3xl border-red-6"
                         key={tag.id}
                       >
                         {tag.name}
@@ -95,12 +95,12 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                 className="p-4 hover:border bg-white rounded-[4px] transition-all flex flex-col justify-between
                 border border-slate6  ease-linear hover:border-slate8"
               >
-                <h3 className="text-lg text-iris12 font-medium pb-2">
+                <h3 className="text-lg text-red-12 font-medium pb-2">
                   <a
                     href={post.node.url}
                     target="_blank"
                     rel="tahirahmedt.com"
-                    className="cursor-pointer hover:underline decoration-iris12"
+                    className="cursor-pointer hover:underline decoration-red-12"
                   >
                     {post.node.title}&nbsp;
                   </a>
@@ -109,7 +109,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
                   {post.node.tags.map((tag: any) => (
                     <div
                       className="text-xs grid place-items-center 
-                      font-medium py-1 px-2 bg-iris3 text-iris11 border-2 rounded-3xl border-iris6"
+                      font-medium py-1 px-2 bg-red-3 text-red-11 border-2 rounded-3xl border-red-6"
                       key={tag.id}
                     >
                       {tag.name}
@@ -126,7 +126,7 @@ export default function HashnodeBlogs({ mode }: IBlogs) {
           target="_blank"
           rel="tahirahmedt.com"
           href="https://blog.tahirahmedt.com"
-          className="bg-white border cursor-pointer  border-iris7 hover:text-white hover:bg-iris10 hover:ring-2 ring-offset-2 hover:ring-iris7 transition-colors text-iris12 px-4 py-2 rounded-3xl"
+          className="bg-white border cursor-pointer  border-red-7 hover:text-white hover:bg-red-10 hover:ring-2 ring-offset-2 hover:ring-red-7 transition-colors text-red-12 px-4 py-2 rounded-3xl"
         >
           Read all articles
         </a>

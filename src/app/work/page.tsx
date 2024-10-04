@@ -56,12 +56,12 @@ export default function Page() {
   ]
   return (
     <main className="pb-12">
-      <h1 className="text-7xl text-center font-semibold text-iris12 py-8">
+      <h1 className="text-7xl text-center font-semibold text-red-12 py-8">
         work
       </h1>
       <Skills />
       <section className="max-w-3xl p-8 mx-auto">
-        <h2 className="text-center text-iris12 font-semibold text-5xl pb-8">
+        <h2 className="text-center text-red-12 font-semibold text-5xl pb-8">
           Experience
         </h2>
         <div className="flex flex-col">

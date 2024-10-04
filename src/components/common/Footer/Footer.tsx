@@ -56,7 +56,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="p-8 mt-auto bg-iris11">
+    <footer className="p-8 mt-auto bg-red-11">
       <section className="max-w-5xl px-8 mx-auto grid grid-cols-1 md:grid-cols-5 place-items-center">
         <div className="md:place-self-start md:col-span-1 col-span-1 place-self-center">
           <Image src={Logo} alt="logo" width={50} height={50} />

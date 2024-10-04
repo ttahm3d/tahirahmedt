@@ -6,6 +6,7 @@ import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { ModeToggle } from '@/components/UI/DarkModeToggle'
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false)
@@ -48,16 +49,17 @@ export default function Header() {
               <Link
                 className={`${
                   pathname === page.path
-                    ? 'text-iris11 ring-1 ring-offset-2 ring-iris11'
+                    ? 'text-red-11 ring-1 ring-offset-2 ring-gray-11'
                     : 'text-slate10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
-                font-medium hover:text-iris11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-iris7`}
+                font-medium hover:text-gray-11 hover:ring-1 rounded-2xl hover:ring-red-7`}
                 href={page.path}
               >
                 {page.name}
               </Link>
             </div>
           ))}
+          <ModeToggle />
         </div>
         <div
           className="lg:hidden ml-auto text-2xl z-10 cursor-pointer"
@@ -75,10 +77,10 @@ export default function Header() {
               <Link
                 className={`${
                   pathname === page.path
-                    ? 'text-iris11 ring-1 ring-offset-2 ring-iris10'
+                    ? 'text-red-11 ring-1 ring-offset-2 ring-red-10'
                     : 'text-slate10'
                 } text-lg px-2 py-1 transition-all ease-linear duration-300 
-                font-medium hover:text-iris11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-iris7`}
+                font-medium hover:text-red-11 hover:ring-1 rounded-2xl ring-offset-2 hover:ring-red-7`}
                 href={page.path}
                 onClick={toggleMenu}
               >
@@ -86,6 +88,7 @@ export default function Header() {
               </Link>
             </div>
           ))}
+          <ModeToggle />
         </div>
         {/* )} */}
       </nav>

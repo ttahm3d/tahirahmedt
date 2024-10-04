@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="bg-[#0000FF07] min-h-fit">
+    <section className="min-h-fit ">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -25,23 +25,23 @@ export default function Hero() {
           }}
           className=" w-full  px-8 pt-20 pb-20 md:pb-20"
         >
-          <h2 className="text-4xl pb-6 text-slate12">Hello,</h2>
-          <h1 className="md:text-6xl text-5xl text-slate12">
+          <h2 className="text-4xl pb-6 text-gray-11">Hello,</h2>
+          <h1 className="md:text-6xl text-5xl text-gray-11">
             I&apos;m&nbsp;
-            <span className="font-extrabold text-iris11">Tahir Ahmed</span>
+            <span className="font-extrabold text-red-11">Tahir Ahmed</span>
           </h1>
-          <p className="pt-8 text-2xl font-light">
-            <span className="font-bold text-iris12">Fullstack Developer</span>,
-            with <span className="font-bold text-iris12">5</span> years of
+          <p className="pt-8 text-2xl text-gray-11">
+            <span className="font-bold text-red-12">Fullstack Developer</span>,
+            with <span className="font-bold text-gray-12">5</span> years of
             experience in developing large-scale web apps using{' '}
-            <span className="font-semibold text-iris12">react</span>,{' '}
-            <span className="font-semibold text-iris12">nodejs</span>, and{' '}
-            <span className="font-semibold text-iris12">nextjs</span>
+            <span className="font-semibold text-red-12">react</span>,{' '}
+            <span className="font-semibold text-red-12">nodejs</span>, and{' '}
+            <span className="font-semibold text-red-12">nextjs</span>
           </p>
           <div className="flex gap-8 pt-12 items-center">
             <button
               onClick={downloadResume}
-              className="bg-iris9 hover:bg-iris10 hover:ring-2 ring-offset-2 hover:ring-iris7 transition-colors text-white rounded-[4px] px-8 py-4"
+              className="bg-red-9 hover:bg-red-10 hover:ring-2 ring-offset-2 hover:ring-red-7 transition-colors text-white rounded-[4px] px-8 py-4"
             >
               View Resume
             </button>
