@@ -1,0 +1,145 @@
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #020817;
+
+    --card: #ffffff;
+    --card-foreground: #020817;
+
+    --popover: #ffffff;
+    --popover-foreground: #020817;
+
+    --primary: #ab4aba;
+    --primary-foreground: #fefcff;
+
+    --secondary: #f7def8;
+    --secondary-foreground: #020817;
+
+    --muted: #f7def8;
+    --muted-foreground: #64748b;
+
+    --accent: #f7def8;
+    --accent-foreground: #020817;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #f8fafc;
+
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #020817;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #020817;
+    --foreground: #f8fafc;
+
+    --card: #020817;
+    --card-foreground: #f8fafc;
+
+    --popover: #020817;
+    --popover-foreground: #f8fafc;
+
+    --primary: #ab4aba;
+    --primary-foreground: #020817;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f8fafc;
+
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #94a3b8;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+:root,
+.light,
+.light-theme {
+  --red-1: #fffcfc;
+  --red-2: #fef8f7;
+  --red-3: #fdecea;
+  --red-4: #ffddd8;
+  --red-5: #ffd0c9;
+  --red-6: #f9c0b8;
+  --red-7: #efada4;
+  --red-8: #e59389;
+  --red-9: #480505;
+  --red-10: #611f1a;
+  --red-11: #a75b52;
+  --red-12: #601e19;
+
+  --red-a1: #ff000003;
+  --red-a2: #e0200008;
+  --red-a3: #e7190015;
+  --red-a4: #ff210027;
+  --red-a5: #ff220036;
+  --red-a6: #ea1d0047;
+  --red-a7: #d31a015b;
+  --red-a8: #c7160076;
+  --red-a9: #440000fa;
+  --red-a10: #4f0600e5;
+  --red-a11: #7e0e00ad;
+  --red-a12: #4f0600e6;
+
+  --red-contrast: #fff;
+  --red-surface: #fef6f5cc;
+  --red-indicator: #480505;
+  --red-track: #480505;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --red-1: oklch(99.4% 0.0028 27.55);
+      --red-2: oklch(98.3% 0.0074 27.55);
+      --red-3: oklch(95.6% 0.0187 27.55);
+      --red-4: oklch(92.8% 0.0423 27.55);
+      --red-5: oklch(89.6% 0.0554 27.55);
+      --red-6: oklch(85.7% 0.0667 27.55);
+      --red-7: oklch(80.7% 0.08 27.55);
+      --red-8: oklch(74.5% 0.1013 27.55);
+      --red-9: oklch(25.8% 0.0975 27.55);
+      --red-10: oklch(34.2% 0.0975 27.55);
+      --red-11: oklch(55.7% 0.1013 27.55);
+      --red-12: oklch(33.9% 0.0975 27.55);
+
+      --red-a1: color(display-p3 0.6745 0.0235 0.0235 / 0.012);
+      --red-a2: color(display-p3 0.7569 0.1451 0.0196 / 0.032);
+      --red-a3: color(display-p3 0.7647 0.1529 0.0078 / 0.083);
+      --red-a4: color(display-p3 0.8431 0.1373 0.0078 / 0.15);
+      --red-a5: color(display-p3 0.8667 0.1373 0.0039 / 0.204);
+      --red-a6: color(display-p3 0.7843 0.1176 0.0039 / 0.271);
+      --red-a7: color(display-p3 0.7098 0.1137 0.0039 / 0.35);
+      --red-a8: color(display-p3 0.6706 0.098 0.0039 / 0.451);
+      --red-a9: color(display-p3 0.2275 0.0118 0 / 0.965);
+      --red-a10: color(display-p3 0.2667 0.0275 0 / 0.887);
+      --red-a11: color(display-p3 0.4235 0.0588 0 / 0.667);
+      --red-a12: color(display-p3 0.2627 0.0314 0 / 0.891);
+
+      --red-contrast: #fff;
+      --red-surface: color(display-p3 0.9922 0.9647 0.9608 / 0.8);
+      --red-indicator: oklch(25.8% 0.0975 27.55);
+      --red-track: oklch(25.8% 0.0975 27.55);
+    }
+  }
+}
