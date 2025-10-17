@@ -32,7 +32,7 @@ export default function Hero() {
           </h1>
           <p className="pt-8 text-2xl font-light">
             <span className="font-bold text-iris12">Fullstack Developer</span>,
-            with <span className="font-bold text-iris12">5</span> years of
+            with <span className="font-bold text-iris12">7</span> years of
             experience in developing large-scale web apps using{' '}
             <span className="font-semibold text-iris12">react</span>,{' '}
             <span className="font-semibold text-iris12">nodejs</span>, and{' '}
