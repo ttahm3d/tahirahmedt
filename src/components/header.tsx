@@ -4,11 +4,11 @@ import { ThemeSwitcher } from "./theme-switcher";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full pt-2">
-      <nav className="h-full container mx-auto backdrop-blur border border-accent-8 flex items-center justify-between p-4 rounded-lg">
+      <nav className="h-full container mx-auto backdrop-blur flex items-center justify-between p-4 rounded-lg">
         <div className="flex items-center space-x-6">
           <Link
             href="/"
-            className="text-accent-12 font-medium hover:text-accent-11 transition-colors"
+            className="text-gray-12 text-3xl font-medium hover:text-accent-10 transition-colors"
           >
             Tahir Ahmed
           </Link>
@@ -41,8 +41,8 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-          <ThemeSwitcher />
         </div>
+        <ThemeSwitcher />
       </nav>
     </header>
   );
