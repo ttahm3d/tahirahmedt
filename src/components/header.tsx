@@ -1,14 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import { ThemeSwitcher } from "./theme-switcher";
+import { useScroll } from "@/hooks/useScroll";
 
 export default function Header() {
+  const scrolled = useScroll();
+
   return (
-    <header className="sticky top-0 z-50 w-full pt-2">
-      <nav className="h-full container mx-auto backdrop-blur flex items-center justify-between p-4 rounded-lg">
+    <header className="sticky top-0 z-50 w-full pt-2 text-white">
+      <nav
+        className={`h-full max-w-6xl mx-auto backdrop-blur flex items-center justify-between p-4 rounded-lg transition-colors duration-200 ${
+          scrolled ? "bg-accent-8/30" : "bg-transparent"
+        }`}
+      >
         <div className="flex items-center space-x-6">
           <Link
             href="/"
-            className="text-gray-12 text-3xl font-medium hover:text-accent-10 transition-colors"
+            className="text-gray-12 text-3xl font-medium hover:text-accent-12 transition-colors"
           >
             Tahir Ahmed
           </Link>
@@ -19,7 +28,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className="text-accent-11 hover:text-accent-12 transition-colors"
+                className="text-gray-11 hover:text-gray-12 transition-colors"
               >
                 Home
               </Link>
@@ -27,7 +36,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="text-accent-11 hover:text-accent-12 transition-colors"
+                className="text-gray-11 hover:text-gray-12 transition-colors"
               >
                 About
               </Link>
@@ -35,7 +44,7 @@ export default function Header() {
             <li>
               <Link
                 href="/projects"
-                className="text-accent-11 hover:text-accent-12 transition-colors"
+                className="text-gray-11 hover:text-gray-12 transition-colors"
               >
                 Projects
               </Link>
