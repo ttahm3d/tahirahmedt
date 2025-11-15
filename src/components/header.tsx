@@ -8,11 +8,13 @@ export default function Header() {
   const scrolled = useScroll();
 
   return (
-    <header className="sticky top-0 z-50 w-full pt-2 text-white">
+    <header
+      className={`sticky top-0 z-50 w-full backdrop-blur pt-2 ${
+        scrolled ? "bg-accent-3/10" : "bg-transparent"
+      }`}
+    >
       <nav
-        className={`h-full max-w-6xl mx-auto backdrop-blur flex items-center justify-between p-4 rounded-lg transition-colors duration-200 ${
-          scrolled ? "bg-accent-8/30" : "bg-transparent"
-        }`}
+        className={`h-full max-w-6xl mx-auto flex items-center justify-between p-4 rounded-lg transition-colors duration-200`}
       >
         <div className="flex items-center space-x-6">
           <Link
