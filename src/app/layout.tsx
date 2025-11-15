@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  // weight: ['400', '700'],
   subsets: ["latin"],
 });
 
@@ -28,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col `}
+        className={`${ibmPlexSans.className} antialiased min-h-screen flex flex-col `}
       >
         <div className="absolute w-full h-[480px] bg-linear-to-b opacity-[0.6] -z-10 from-accent-4 to-transparent"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

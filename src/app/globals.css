@@ -2,60 +2,60 @@
 
 @theme {
   /* Light mode colors (default) */
-  --color-accent-1: #fcf7f6;
-  --color-accent-2: #faf3f1;
-  --color-accent-3: #f7e7e5;
-  --color-accent-4: #f9dcd6;
-  --color-accent-5: #f7d1ca;
-  --color-accent-6: #f3c6be;
-  --color-accent-7: #eeb8ae;
-  --color-accent-8: #e4a094;
-  --color-accent-9: #310100;
-  --color-accent-10: #4e1b14;
-  --color-accent-11: #884c42;
-  --color-accent-12: #410f09;
+  --color-accent-1: oklch(99.3% 0.0033 252.8);
+  --color-accent-2: oklch(98.2% 0.0094 252.8);
+  --color-accent-3: oklch(96% 0.0197 252.8);
+  --color-accent-4: oklch(93.7% 0.0367 252.8);
+  --color-accent-5: oklch(90.6% 0.0529 252.8);
+  --color-accent-6: oklch(86.4% 0.0679 252.8);
+  --color-accent-7: oklch(80.9% 0.0875 252.8);
+  --color-accent-8: oklch(73.5% 0.1198 252.8);
+  --color-accent-9: oklch(65.1% 0.191 252.8);
+  --color-accent-10: oklch(61.1% 0.1818 252.8);
+  --color-accent-11: oklch(55.8% 0.1869 252.8);
+  --color-accent-12: oklch(32.4% 0.0955 252.8);
 
-  --color-gray-1: #fdfcfd;
-  --color-gray-2: #faf9fb;
-  --color-gray-3: #f2eff3;
-  --color-gray-4: #eae7ec;
-  --color-gray-5: #e3dfe6;
-  --color-gray-6: #dbd8e0;
-  --color-gray-7: #d0cdd7;
-  --color-gray-8: #bcbac7;
-  --color-gray-9: #8e8c99;
-  --color-gray-10: #84828e;
-  --color-gray-11: #65636d;
-  --color-gray-12: #211f26;
+  --color-gray-1: oklch(99.1% 0.0015 277.7);
+  --color-gray-2: oklch(98.2% 0.003 277.7);
+  --color-gray-3: oklch(95.6% 0.0045 277.7);
+  --color-gray-4: oklch(93.1% 0.0061 277.7);
+  --color-gray-5: oklch(91% 0.0077 277.7);
+  --color-gray-6: oklch(88.8% 0.0093 277.7);
+  --color-gray-7: oklch(85.3% 0.0117 277.7);
+  --color-gray-8: oklch(79.4% 0.016 277.7);
+  --color-gray-9: oklch(64.6% 0.0165 277.7);
+  --color-gray-10: oklch(61% 0.0161 277.7);
+  --color-gray-11: oklch(50.3% 0.0139 277.7);
+  --color-gray-12: oklch(24.1% 0.0099 277.7);
 }
 
 /* Dark mode overrides */
 .dark {
-  --color-accent-1: #241a18;
-  --color-accent-2: #2b1b18;
-  --color-accent-3: #49160f;
-  --color-accent-4: #600b04;
-  --color-accent-5: #6c180f;
-  --color-accent-6: #7a261c;
-  --color-accent-7: #8e392d;
-  --color-accent-8: #ab5346;
-  --color-accent-9: #c66b5c;
-  --color-accent-10: #b85e50;
-  --color-accent-11: #fb9b8b;
-  --color-accent-12: #ffcfc5;
+  --color-accent-1: oklch(17.8% 0.0255 252.8);
+  --color-accent-2: oklch(21% 0.0292 252.8);
+  --color-accent-3: oklch(27.3% 0.0662 252.8);
+  --color-accent-4: oklch(31.6% 0.0991 252.8);
+  --color-accent-5: oklch(36.4% 0.1072 252.8);
+  --color-accent-6: oklch(41.6% 0.1112 252.8);
+  --color-accent-7: oklch(47.5% 0.1198 252.8);
+  --color-accent-8: oklch(54.1% 0.1381 252.8);
+  --color-accent-9: oklch(65.1% 0.191 252.8);
+  --color-accent-10: oklch(61.1% 0.191 252.8);
+  --color-accent-11: oklch(76.8% 0.1331 252.8);
+  --color-accent-12: oklch(90.7% 0.0505 252.8);
 
-  --color-gray-1: #121113;
-  --color-gray-2: #1a191b;
-  --color-gray-3: #232225;
-  --color-gray-4: #2b292d;
-  --color-gray-5: #323035;
-  --color-gray-6: #3c393f;
-  --color-gray-7: #49474e;
-  --color-gray-8: #625f69;
-  --color-gray-9: #6f6d78;
-  --color-gray-10: #7c7a85;
-  --color-gray-11: #b5b2bc;
-  --color-gray-12: #eeeef0;
+  --color-gray-1: oklch(17.8% 0.0042 277.7);
+  --color-gray-2: oklch(21.5% 0.004 277.7);
+  --color-gray-3: oklch(25.5% 0.0055 277.7);
+  --color-gray-4: oklch(28.4% 0.0075 277.7);
+  --color-gray-5: oklch(31.4% 0.0089 277.7);
+  --color-gray-6: oklch(35% 0.01 277.7);
+  --color-gray-7: oklch(40.2% 0.0121 277.7);
+  --color-gray-8: oklch(49.2% 0.0157 277.7);
+  --color-gray-9: oklch(54% 0.0167 277.7);
+  --color-gray-10: oklch(58.6% 0.0165 277.7);
+  --color-gray-11: oklch(77% 0.0138 277.7);
+  --color-gray-12: oklch(94.9% 0.0026 277.7);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
