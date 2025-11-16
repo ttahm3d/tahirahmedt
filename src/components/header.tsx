@@ -107,7 +107,9 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <ThemeSwitcher />
+            <div onClick={toggleMenu}>
+              <ThemeSwitcher />
+            </div>
           </ul>
         </div>
       </div>

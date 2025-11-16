@@ -59,3 +59,10 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: var(--color-gray-1);
+    color: var(--color-gray-12);
+  }
+}
