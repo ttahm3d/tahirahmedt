@@ -38,8 +38,11 @@ const projects: Array<IProject> = [
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div key={project.name} className="p-4 rounded-md border border-gray-6">
-      <h3 className="text-xl self-center font-medium text-accent-10">
+    <div
+      key={project.name}
+      className="p-4 max-w-2xl mx-auto w-full rounded-md border border-gray-6"
+    >
+      <h3 className="text-xl self-center font-medium text-accent-11">
         {project.name}
       </h3>
       <p className="text-sm text-gray-11 self-center">{project.description}</p>

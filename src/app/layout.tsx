@@ -25,12 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ibmPlexSans.className} antialiased min-h-screen flex flex-col `}
+        className={`${ibmPlexSans.className} antialiased min-h-screen flex flex-col`}
       >
-        <div className="absolute w-full h-[480px] bg-linear-to-b opacity-[0.6] -z-10 from-accent-4 to-transparent"></div>
+        {/* <div className="absolute w-full h-[480px] bg-linear-to-b opacity-[0.6] -z-10 from-accent-4 to-transparent"></div> */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
