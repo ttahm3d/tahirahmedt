@@ -38,17 +38,12 @@ const projects: Array<IProject> = [
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div
-      key={project.name}
-      className="p-4 rounded-md border border-gray-6 grid grid-rows-3"
-    >
-      <h3 className="text-xl row-span-1 self-center font-medium text-accent-10">
+    <div key={project.name} className="p-4 rounded-md border border-gray-6">
+      <h3 className="text-xl self-center font-medium text-accent-10">
         {project.name}
       </h3>
-      <p className="text-sm text-gray-11 row-span-1 self-center">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2 text-xs mt-1 row-span-1 self-center">
+      <p className="text-sm text-gray-11 self-center">{project.description}</p>
+      <div className="flex flex-wrap gap-2 text-xs mt-1 self-center">
         {project.tags.map((tag) => (
           <div
             className="px-2 py-1 border-2 border-gray-6 bg-gray-2 text-gray-11 font-medium rounded-full"
@@ -65,7 +60,9 @@ function ProjectCard({ project }: { project: IProject }) {
 export default function ProjectsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-accent-12 mb-8">Projects</h1>
+      <h1 className="text-6xl font-bold text-center text-accent-12 mb-8">
+        Projects
+      </h1>
       <div className="grid grid-cols-1 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

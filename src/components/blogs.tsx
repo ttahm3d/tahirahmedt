@@ -19,7 +19,7 @@ export default function Blogs() {
   return (
     <section className="max-w-6xl mx-auto w-full px-4 py-16">
       <h2 className="text-2xl font-bold text-center mb-4">Latest Blog Posts</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 pt-12 p-8 gap-8 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 pt-12 md:p-8 gap-8 mx-auto">
         {blogs?.publication.posts.edges.map((post: any) => (
           <div
             key={post.node.id}
