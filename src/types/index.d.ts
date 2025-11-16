@@ -26,4 +26,6 @@ type Skill =
   | "typescript"
   | "nodejs"
   | "styled-components"
-  | "redux";
+  | "redux"
+  | "firebase"
+  | "Supabase";

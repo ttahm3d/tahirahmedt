@@ -4,14 +4,14 @@ const projects: Array<IProject> = [
     description: "Social media app",
     github: "https://github.com/ttahm3d/breakout",
     live: "https://break--out.vercel.app/",
-    tags: ["react", "styled-components", "typescript", "redux"],
+    tags: ["react", "styled-components", "typescript", "redux", "firebase"],
   },
   {
     name: "NoteIt",
     description: "Notes App with React on frontend and Supabase on the backend",
     github: "https://github.com/ttahm3d/noteit",
     live: "https://note--it.vercel.app/",
-    tags: ["react", "styled-components"],
+    tags: ["react", "styled-components", "Supabase"],
   },
   {
     name: "AegisStore",
