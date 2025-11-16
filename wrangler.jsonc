@@ -19,6 +19,10 @@
     {
       "pattern": "www.tahirahmedt.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "tahirahmedt.com",
+      "custom_domain": true
     }
   ]
   /**

@@ -30,7 +30,7 @@ export default function RootLayout({
         {/* <div className="absolute w-full h-[480px] bg-linear-to-b opacity-[0.6] -z-10 from-accent-4 to-transparent"></div> */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main>{children}</main>
+          <>{children}</>
           <Footer />
         </ThemeProvider>
       </body>

@@ -14,8 +14,6 @@ export default function Blogs() {
     getBlogposts();
   }, []);
 
-  console.log(blogs);
-
   return (
     <section className="max-w-6xl mx-auto w-full px-4 py-16">
       <h2 className="text-2xl font-bold text-center mb-4">Latest Blog Posts</h2>
