@@ -1,69 +1,74 @@
-interface Project {
-  title: string;
-  description: string;
-  tags: string[];
-  link?: string;
-}
-
-const projects: Project[] = [
+const projects: Array<IProject> = [
   {
-    title: "Project One",
-    description: "A full-stack application built with Next.js and MongoDB",
-    tags: ["Next.js", "MongoDB", "TypeScript", "Tailwind CSS"],
-    link: "https://github.com/yourusername/project-one",
+    name: "Breakout",
+    description: "Social media app",
+    github: "https://github.com/ttahm3d/breakout",
+    live: "https://break--out.vercel.app/",
+    tags: ["react", "styled-components", "typescript", "redux"],
   },
   {
-    title: "Project Two",
-    description: "Real-time chat application using Socket.io and React",
-    tags: ["React", "Socket.io", "Node.js", "Express"],
-    link: "https://github.com/yourusername/project-two",
+    name: "NoteIt",
+    description: "Notes App with React on frontend and Supabase on the backend",
+    github: "https://github.com/ttahm3d/noteit",
+    live: "https://note--it.vercel.app/",
+    tags: ["react", "styled-components"],
   },
   {
-    title: "Project Three",
-    description: "E-commerce platform with advanced filtering and search",
-    tags: ["Next.js", "PostgreSQL", "Prisma", "Redux"],
-    link: "https://github.com/yourusername/project-three",
+    name: "AegisStore",
+    description: "Ecommerce store to sell Dota 2 Merch",
+    github: "https://github.com/ttahm3d/aegis-store",
+    live: "https://aegis-store.vercel.app/",
+    tags: ["react", "SASS"],
+  },
+  {
+    name: "ChunksUI",
+    description: "Component library with utility classes",
+    github: "https://github.com/ttahm3d/chunks",
+    live: "https://chunksui.netlify.app",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "AegisTube",
+    description: "Video library with Dota 2 Videos",
+    github: "https://github.com/ttahm3d/aegistube",
+    live: "https://aegistube.vercel.app/",
+    tags: ["react", "JavaScript", "CSS"],
   },
 ];
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div className="p-6 rounded-lg border border-accent-6 bg-accent-2 hover:border-accent-7 transition-colors">
-      <h3 className="text-xl font-semibold text-accent-12 mb-2">
-        {project.title}
+    <div
+      key={project.name}
+      className="p-4 rounded-md border border-gray-6 grid grid-rows-3"
+    >
+      <h3 className="text-xl row-span-1 self-center font-medium text-accent-10">
+        {project.name}
       </h3>
-      <p className="text-accent-11 mb-4">{project.description}</p>
-      <div className="flex flex-wrap gap-2">
+      <p className="text-sm text-gray-11 row-span-1 self-center">
+        {project.description}
+      </p>
+      <div className="flex flex-wrap gap-2 text-xs mt-1 row-span-1 self-center">
         {project.tags.map((tag) => (
-          <span
+          <div
+            className="px-2 py-1 border-2 border-gray-6 bg-gray-2 text-gray-11 font-medium rounded-full"
             key={tag}
-            className="px-2 py-1 text-sm rounded-md bg-accent-3 text-accent-11"
           >
             {tag}
-          </span>
+          </div>
         ))}
       </div>
-      {project.link && (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-block text-accent-11 hover:text-accent-12 transition-colors"
-        >
-          View Project →
-        </a>
-      )}
     </div>
   );
 }
 
 export default function ProjectsPage() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-accent-12 mb-8">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
     </section>
