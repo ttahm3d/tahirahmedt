@@ -5,11 +5,11 @@ import { remark } from "remark";
 import html from "remark-html";
 
 interface BlogPostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const postsDir = path.join(process.cwd(), "src/posts");
+  const postsDir = path.join(process.cwd(), "posts");
   const files = fs.readdirSync(postsDir);
   return files.map((file) => ({
     slug: file.replace(/\.md$/, ""),
@@ -17,8 +17,8 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }: BlogPostProps) {
-  const { slug } = params;
-  const filePath = path.join(process.cwd(), "src/posts", `${slug}.md`);
+  const { slug } = await params;
+  const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
 
   const { data: metadata, content } = matter(fileContent);
