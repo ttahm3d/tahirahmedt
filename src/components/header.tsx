@@ -28,8 +28,8 @@ export default function Header() {
 
   return (
     <header
-      className={`md:sticky top-0 z-50 px-4 w-full backdrop-blur py-2 ${
-        scrolled ? "bg-accent-3/10" : "bg-transparent"
+      className={`md:sticky top-0 z-50 px-4 w-full backdrop-blur-sm py-2 ${
+        scrolled ? "bg-gray-5/80" : "bg-transparent"
       }`}
     >
       {/* logo +  nav + theme switch => ipad + desktop*/}
@@ -65,7 +65,7 @@ export default function Header() {
       </div>
       {/* menu bar */}
       {/* logo + icon to open menu => mobile */}
-      <div className="flex justify-between md:hidden p-4 items-center max-w-6xl mx-auto">
+      <div className="flex justify-between md:hidden py-4 items-center max-w-6xl mx-auto">
         <div className="flex items-center">
           <Link
             href="/"

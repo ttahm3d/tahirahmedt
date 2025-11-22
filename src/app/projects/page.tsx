@@ -40,11 +40,23 @@ function ProjectCard({ project }: { project: IProject }) {
   return (
     <div
       key={project.name}
-      className="p-4 max-w-2xl mx-auto w-full rounded-md border border-gray-6"
+      className="p-4 max-w-2xl mx-auto w-full rounded-md border border-gray-6 hover:border-gray-7 hover:bg-gray-3 transition-all"
     >
-      <h3 className="text-xl self-center font-medium text-accent-11">
-        {project.name}
-      </h3>
+      <div className="flex justify-between gap-4 items-center mb-4">
+        <h3 className="text-xl self-center font-medium text-accent-11">
+          <a
+            href={project.live}
+            className="hover:underline cursor-pointer decoration-accent-11"
+          >
+            {project.name}
+          </a>
+        </h3>
+        <div>
+          <a className="text-gray-10 text-xs px-2 py-0.5 inline-block rounded-lg hover:underline decoration-gray-11 cursor-pointer">
+            Github
+          </a>
+        </div>
+      </div>
       <p className="text-sm text-gray-11 self-center">{project.description}</p>
       <div className="flex flex-wrap gap-2 text-xs mt-1 self-center">
         {project.tags.map((tag) => (

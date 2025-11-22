@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   title: "Tahir Ahmed T",
   description:
     "Tahir Ahmed is a MERN full-stack developer with 7 years of experience, currently working at PwC.",
+  openGraph: {
+    title: "Tahir Ahmed T",
+    description:
+      "Tahir Ahmed is a MERN full-stack developer with 7 years of experience, currently working at PwC.",
+    url: "https://tahirahmedt.com",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
