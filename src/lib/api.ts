@@ -1,4 +1,4 @@
-import request, { gql } from 'graphql-request'
+import request, { gql } from "graphql-request";
 
 export const getPostsFromHashnode = async () => {
   const graphqlQuery = gql`
@@ -28,7 +28,7 @@ export const getPostsFromHashnode = async () => {
         }
       }
     }
-  `
-  const response = await request('https://gql.hashnode.com/', graphqlQuery)
-  return response
-}
+  `;
+  const response = await request("https://gql.hashnode.com/", graphqlQuery);
+  return response;
+};

@@ -1,3 +1,6 @@
 {
-  "git.ignoreLimitWarning": true
+  "files.associations": {
+    "wrangler.json": "jsonc",
+    "*.css": "tailwindcss"
+  }
 }

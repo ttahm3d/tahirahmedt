@@ -1,10 +1,11 @@
-import { HashnodeBlogs, Hero } from '@/components'
+import Hero from "@/components/hero";
+import Blogs from "@/components/blogs";
 
-export default function Page() {
+export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
-      <HashnodeBlogs mode="shorthand" />
-    </main>
-  )
+      <Blogs />
+    </>
+  );
 }
