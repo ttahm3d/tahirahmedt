@@ -46,13 +46,18 @@ function ProjectCard({ project }: { project: IProject }) {
         <h3 className="text-xl self-center font-medium text-accent-11">
           <a
             href={project.live}
+            target="_blank"
             className="hover:underline cursor-pointer decoration-accent-11"
           >
             {project.name}
           </a>
         </h3>
         <div>
-          <a className="text-gray-10 text-xs px-2 py-0.5 inline-block rounded-lg hover:underline decoration-gray-11 cursor-pointer">
+          <a
+            href={project.github}
+            target="_blank"
+            className="text-gray-10 text-xs px-2 py-0.5 inline-block rounded-lg hover:underline decoration-gray-11 cursor-pointer"
+          >
             Github
           </a>
         </div>
