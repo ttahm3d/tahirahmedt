@@ -1,4 +1,4 @@
-import { FaLinkedin } from "react-icons/fa";
+import ViewResume from "./view-resume";
 
 export default function Hero() {
   return (
@@ -22,20 +22,7 @@ export default function Hero() {
         <span className="font-semibold">Senior Engineer</span> and I&apos;m
         actively seeking new opportunities.
       </p>
-      <div className="flex items-center space-x-6">
-        <button className="px-4 py-2 w-fit border bg-accent-11 dark:bg-accent-9/55 hover:bg-accent-11 transition cursor-pointer border-accent-7 hover:border-accent-8 text-white font-semibold rounded-md">
-          Download Resume
-        </button>
-        <div>
-          <a
-            href="https://www.linkedin.com/in/tahirahmedt"
-            target="_blank"
-            rel="tahirahmedt.com"
-          >
-            <FaLinkedin size={44} />
-          </a>
-        </div>
-      </div>
+      <ViewResume />
     </section>
   );
 }
