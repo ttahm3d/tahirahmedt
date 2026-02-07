@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* Light mode colors (default) */
+  --color-accent-1: oklch(99.3% 0.0039 71.67);
+  --color-accent-2: oklch(98.8% 0.0191 71.67);
+  --color-accent-3: oklch(97.4% 0.0526 71.67);
+  --color-accent-4: oklch(95.3% 0.0526 71.67);
+  --color-accent-5: oklch(92.5% 0.0526 71.67);
+  --color-accent-6: oklch(88.1% 0.0526 71.67);
+  --color-accent-7: oklch(83.5% 0.0526 71.67);
+  --color-accent-8: oklch(76.6% 0.0526 71.67);
+  --color-accent-9: oklch(40.5% 0.035 71.67);
+  --color-accent-10: oklch(34.5% 0.035 71.67);
+  --color-accent-11: oklch(57.4% 0.0526 71.67);
+  --color-accent-12: oklch(35.8% 0.035 71.67);
+
+  --color-gray-1: oklch(99.1% 0.0015 277.7);
+  --color-gray-2: oklch(98.2% 0.003 277.7);
+  --color-gray-3: oklch(95.6% 0.0045 277.7);
+  --color-gray-4: oklch(93.1% 0.0061 277.7);
+  --color-gray-5: oklch(91% 0.0077 277.7);
+  --color-gray-6: oklch(88.8% 0.0093 277.7);
+  --color-gray-7: oklch(85.3% 0.0117 277.7);
+  --color-gray-8: oklch(79.4% 0.016 277.7);
+  --color-gray-9: oklch(64.6% 0.0165 277.7);
+  --color-gray-10: oklch(61% 0.0161 277.7);
+  --color-gray-11: oklch(50.3% 0.0139 277.7);
+  --color-gray-12: oklch(24.1% 0.0099 277.7);
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-accent-1: oklch(17.8% 0.005 71.67);
+  --color-accent-2: oklch(21.3% 0.0064 71.67);
+  --color-accent-3: oklch(25.3% 0.011 71.67);
+  --color-accent-4: oklch(28.6% 0.0155 71.67);
+  --color-accent-5: oklch(31.9% 0.0206 71.67);
+  --color-accent-6: oklch(36.1% 0.027 71.67);
+  --color-accent-7: oklch(41.7% 0.035 71.67);
+  --color-accent-8: oklch(50.1% 0.0464 71.67);
+  --color-accent-9: oklch(59% 0.0526 71.67);
+  --color-accent-10: oklch(54.7% 0.0526 71.67);
+  --color-accent-11: oklch(78.5% 0.0526 71.67);
+  --color-accent-12: oklch(93.1% 0.0289 71.67);
+
+  --color-gray-1: oklch(17.8% 0.0042 277.7);
+  --color-gray-2: oklch(21.5% 0.004 277.7);
+  --color-gray-3: oklch(25.5% 0.0055 277.7);
+  --color-gray-4: oklch(28.4% 0.0075 277.7);
+  --color-gray-5: oklch(31.4% 0.0089 277.7);
+  --color-gray-6: oklch(35% 0.01 277.7);
+  --color-gray-7: oklch(40.2% 0.0121 277.7);
+  --color-gray-8: oklch(49.2% 0.0157 277.7);
+  --color-gray-9: oklch(54% 0.0167 277.7);
+  --color-gray-10: oklch(58.6% 0.0165 277.7);
+  --color-gray-11: oklch(77% 0.0138 277.7);
+  --color-gray-12: oklch(94.9% 0.0026 277.7);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: var(--color-gray-1);
+    color: var(--color-gray-12);
+  }
+}

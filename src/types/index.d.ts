@@ -28,4 +28,5 @@ type Skill =
   | "styled-components"
   | "redux"
   | "firebase"
-  | "Supabase";
+  | "Supabase"
+  | typeof string;
