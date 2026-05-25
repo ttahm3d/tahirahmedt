@@ -2,7 +2,7 @@ import ViewResume from "./view-resume";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto flex flex-col justify-center py-20 px-4 space-y-1.5 border-b border-gray-6">
+    <section className="max-w-6xl mx-auto flex flex-col justify-center py-20 px-4 space-y-1.5 min-h-[80vh]">
       <h2 className="text-4xl pb-6 text-gray-12">Hello,</h2>
       <h1 className="md:text-6xl text-6xl text-gray-12">
         I&apos;m&nbsp;
