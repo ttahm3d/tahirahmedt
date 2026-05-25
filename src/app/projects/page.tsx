@@ -1,3 +1,25 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Tahir Ahmed T | Full Stack Developer",
+  description:
+    "Portfolio of full-stack projects including AI tools, e-commerce platforms, and social media applications built with React, Next.js, Node.js, and Firebase.",
+  keywords: [
+    "projects",
+    "portfolio",
+    "web development",
+    "React",
+    "Next.js",
+    "Full stack",
+  ],
+  openGraph: {
+    title: "Projects - Tahir Ahmed T",
+    description: "Portfolio of full-stack web development projects.",
+    url: "https://tahirahmedt.com/projects",
+    type: "website",
+  },
+};
+
 const projects: Array<IProject> = [
   {
     name: "Snapshot Ai",
@@ -89,15 +111,39 @@ function ProjectCard({ project }: { project: IProject }) {
 
 export default function ProjectsPage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-6xl font-bold text-center text-accent-12 mb-8">
-        Projects
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
-        ))}
-      </div>
-    </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Projects",
+            description: "Portfolio of full-stack web development projects",
+            url: "https://tahirahmedt.com/projects",
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: projects.map((project, index) => ({
+                "@type": "CreativeWork",
+                position: index + 1,
+                name: project.name,
+                description: project.description,
+                url: project.live,
+              })),
+            },
+          }),
+        }}
+      />
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <h1 className="text-6xl font-bold text-center text-accent-12 mb-8">
+          Projects
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

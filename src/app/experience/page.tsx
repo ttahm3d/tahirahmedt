@@ -1,3 +1,28 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience - Tahir Ahmed T | Full Stack Developer",
+  description:
+    "7+ years of full-stack development experience. Senior SDE at Autodesk. Previously at PwC and Wipro. Expert in React, Node.js, Next.js, TypeScript, AWS, and Azure.",
+  keywords: [
+    "full stack developer",
+    "software engineer",
+    "React",
+    "Node.js",
+    "Next.js",
+    "TypeScript",
+    "AWS",
+    "Azure",
+  ],
+  openGraph: {
+    title: "Experience - Tahir Ahmed T | Full Stack Developer",
+    description:
+      "7+ years of full-stack development experience building scalable web applications.",
+    url: "https://tahirahmedt.com/experience",
+    type: "profile",
+  },
+};
+
 export default function AboutPage() {
   const experiences = [
     {
@@ -74,45 +99,77 @@ export default function AboutPage() {
     },
   ];
   return (
-    <section className="px-4 py-16">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-6xl text-center font-bold text-accent-12 mb-8">
-          Experience
-        </h1>
-      </div>
-      <div className="max-w-6xl mx-auto px-4">
-        {experiences.map((exp) => (
-          <div
-            key={exp.company}
-            className="mb-12 border-l border-accent-7 pl-6 relative"
-          >
-            <h2 className="text-3xl font-semibold text-accent-12 mb-1">
-              {exp.company}
-            </h2>
-            <p className="text-gray-11 italic mb-6">
-              {exp.role} | {exp.duration}
-            </p>
-            <ul className="list-disc list-inside mb-4">
-              {exp.workItems.map((item, index) => (
-                <li key={index} className="text-gray-11 mb-2 text-justify">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-wrap gap-2">
-              {exp.technologies.map((tech, index) => (
-                <div
-                  key={index}
-                  className="bg-accent-3 text-accent-11 text-xs px-2 py-1 rounded-full"
-                >
-                  {tech}
-                </div>
-              ))}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Tahir Ahmed T",
+            url: "https://tahirahmedt.com",
+            jobTitle: "Senior Software Developer",
+            workLocation: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+              },
+            },
+            knowsAbout: [
+              "Full-stack development",
+              "React",
+              "Next.js",
+              "Node.js",
+              "TypeScript",
+              "AWS",
+              "Azure",
+              "PostgreSQL",
+              "Microservices",
+            ],
+          }),
+        }}
+      />
+      <section className="px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-6xl text-center font-bold text-accent-12 mb-8">
+            Experience
+          </h1>
+        </div>
+        <div className="max-w-6xl mx-auto px-4">
+          {experiences.map((exp) => (
+            <div
+              key={exp.company}
+              className="mb-12 border-l border-accent-7 pl-6 relative"
+            >
+              <h2 className="text-3xl font-semibold text-accent-12 mb-1">
+                {exp.company}
+              </h2>
+              <p className="text-gray-11 italic mb-6">
+                {exp.role} | {exp.duration}
+              </p>
+              <ul className="list-disc list-inside mb-4">
+                {exp.workItems.map((item, index) => (
+                  <li key={index} className="text-gray-11 mb-2 text-justify">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                {exp.technologies.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="bg-accent-3 text-accent-11 text-xs px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <div className="w-4 h-4 bg-accent-9 rounded-full absolute top-3 left-[-9]"></div>
             </div>
-            <div className="w-4 h-4 bg-accent-9 rounded-full absolute top-3 left-[-9]"></div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
