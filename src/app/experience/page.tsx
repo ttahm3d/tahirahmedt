@@ -1,9 +1,30 @@
 export default function AboutPage() {
   const experiences = [
     {
+      company: "Autodesk",
+      role: "Senior SDE",
+      duration: "December 2025 - Present",
+      workItems: [
+        "Developed features for Autodesk Design & Make Marketplace — seat, entitlement, and license management.",
+        "Modernized the platform by migrating the monolith to Next.js frontend and NestJS microservices.",
+        "Implemented end-to-end observability using Dynatrace, CloudWatch, and Splunk, improving monitoring coverage and system insights.",
+      ],
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "AWS",
+        "PostgreSQL",
+        "Docker",
+        "EKS",
+        "Dynatrace",
+        "Zustand",
+        "Microservices",
+      ],
+    },
+    {
       company: "PricewaterhouseCoopers (PwC)",
       role: "Senior Associate",
-      duration: "August 2021 - Present",
+      duration: "August 2021 - December 2025",
       workItems: [
         "Developed and deployed 6+ scalable projects built with Typescript, ReactJS and NodeJS with 80% test coverage. The projects span across domains such as software, healthcare, finance, regulations and value chain optimization.",
         "Lead a the UI team in development of development of Revenue Growth Optimization tool which being used by industry leading giants such as Nestle and Hershey's to plan their trade promotions.",
